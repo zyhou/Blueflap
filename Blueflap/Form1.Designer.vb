@@ -24,7 +24,7 @@ Partial Class Fenetre_Principale
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Fenetre_Principale))
-        Me.Navigateur = New System.Windows.Forms.Panel()
+        Me.ABlueflap_Navigateur = New System.Windows.Forms.Panel()
         Me.Notif_internet = New System.Windows.Forms.PictureBox()
         Me.Web = New Awesomium.Windows.Forms.WebControl(Me.components)
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -47,6 +47,8 @@ Partial Class Fenetre_Principale
         Me.SmartAdressbox = New System.Windows.Forms.TextBox()
         Me.Menu_ShowHide_Button = New System.Windows.Forms.Button()
         Me.voletlateral = New System.Windows.Forms.MenuStrip()
+        Me.Menu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Menu_Home = New System.Windows.Forms.ToolStripMenuItem()
         Me.Menu_Back = New System.Windows.Forms.ToolStripMenuItem()
         Me.Menu_Forward = New System.Windows.Forms.ToolStripMenuItem()
@@ -59,7 +61,7 @@ Partial Class Fenetre_Principale
         Me.Menu_Lock = New System.Windows.Forms.ToolStripMenuItem()
         Me.Menu_FullScr = New System.Windows.Forms.ToolStripMenuItem()
         Me.Menu_Memo = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Settings = New System.Windows.Forms.Panel()
+        Me.ABlueflap_Settings = New System.Windows.Forms.Panel()
         Me.stng_More = New System.Windows.Forms.Button()
         Me.stng_github = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -113,7 +115,7 @@ Partial Class Fenetre_Principale
         Me.LineShape2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.RectangleShape2 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.Fight = New System.Windows.Forms.Panel()
+        Me.ABlueflap_Fight = New System.Windows.Forms.Panel()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.SrchF_fighter_1 = New Awesomium.Windows.Forms.WebControl(Me.components)
         Me.SrchF_fighter_2 = New Awesomium.Windows.Forms.WebControl(Me.components)
@@ -124,7 +126,7 @@ Partial Class Fenetre_Principale
         Me.SrchF_Back = New System.Windows.Forms.Button()
         Me.ShapeContainer2 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.Verrouillage = New System.Windows.Forms.Panel()
+        Me.ABlueflap_Verrouillage = New System.Windows.Forms.Panel()
         Me.Verr_BlackEffect = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Verr_Date = New System.Windows.Forms.Label()
@@ -134,7 +136,7 @@ Partial Class Fenetre_Principale
         Me.Verr_Time = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Verr_WrongMp = New System.Windows.Forms.Label()
-        Me.Infos = New System.Windows.Forms.Panel()
+        Me.ABlueflap_Infos = New System.Windows.Forms.Panel()
         Me.Infos_code_source = New FastColoredTextBoxNS.FastColoredTextBox()
         Me.Infos_Save = New System.Windows.Forms.Button()
         Me.Infos_Print = New System.Windows.Forms.Button()
@@ -148,7 +150,7 @@ Partial Class Fenetre_Principale
         Me.WebSessionProvider1 = New Awesomium.Windows.Forms.WebSessionProvider(Me.components)
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.Bluestart = New System.Windows.Forms.Panel()
+        Me.ABlueflap_Bluestart = New System.Windows.Forms.Panel()
         Me.BS_Searchfight = New System.Windows.Forms.Button()
         Me.BS_Browser = New System.Windows.Forms.Button()
         Me.Bs_Favbulle = New System.Windows.Forms.Panel()
@@ -163,7 +165,7 @@ Partial Class Fenetre_Principale
         Me.BS_DateSetColor = New System.Windows.Forms.Button()
         Me.BS_ImgChoose = New System.Windows.Forms.Button()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.Navigateur.SuspendLayout()
+        Me.ABlueflap_Navigateur.SuspendLayout()
         CType(Me.Notif_internet, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.fav_notif_suppr.SuspendLayout()
@@ -171,44 +173,45 @@ Partial Class Fenetre_Principale
         Me.Notif_add.SuspendLayout()
         CType(Me.Loader, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.voletlateral.SuspendLayout()
-        Me.Settings.SuspendLayout()
+        Me.Menu.SuspendLayout()
+        Me.ABlueflap_Settings.SuspendLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Fight.SuspendLayout()
+        Me.ABlueflap_Fight.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
-        Me.Verrouillage.SuspendLayout()
+        Me.ABlueflap_Verrouillage.SuspendLayout()
         Me.Verr_BlackEffect.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        Me.Infos.SuspendLayout()
+        Me.ABlueflap_Infos.SuspendLayout()
         CType(Me.Infos_code_source, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Infos_Loader, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Bluestart.SuspendLayout()
+        Me.ABlueflap_Bluestart.SuspendLayout()
         Me.Bs_Favbulle.SuspendLayout()
         Me.Label14.SuspendLayout()
         Me.Pop.SuspendLayout()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Navigateur
+        'ABlueflap_Navigateur
         '
-        Me.Navigateur.Controls.Add(Me.Notif_internet)
-        Me.Navigateur.Controls.Add(Me.Web)
-        Me.Navigateur.Controls.Add(Me.Panel1)
-        Me.Navigateur.Controls.Add(Me.Barre)
-        Me.Navigateur.Controls.Add(Me.voletlateral)
-        Me.Navigateur.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Navigateur.Location = New System.Drawing.Point(0, 0)
-        Me.Navigateur.Name = "Navigateur"
-        Me.Navigateur.Size = New System.Drawing.Size(1117, 607)
-        Me.Navigateur.TabIndex = 0
+        Me.ABlueflap_Navigateur.Controls.Add(Me.Notif_internet)
+        Me.ABlueflap_Navigateur.Controls.Add(Me.Web)
+        Me.ABlueflap_Navigateur.Controls.Add(Me.Panel1)
+        Me.ABlueflap_Navigateur.Controls.Add(Me.Barre)
+        Me.ABlueflap_Navigateur.Controls.Add(Me.voletlateral)
+        Me.ABlueflap_Navigateur.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ABlueflap_Navigateur.Location = New System.Drawing.Point(0, 0)
+        Me.ABlueflap_Navigateur.Name = "ABlueflap_Navigateur"
+        Me.ABlueflap_Navigateur.Size = New System.Drawing.Size(1117, 607)
+        Me.ABlueflap_Navigateur.TabIndex = 0
         '
         'Notif_internet
         '
@@ -488,6 +491,7 @@ Partial Class Fenetre_Principale
         Me.voletlateral.AutoSize = False
         Me.voletlateral.BackColor = System.Drawing.Color.White
         Me.voletlateral.BackgroundImage = CType(resources.GetObject("voletlateral.BackgroundImage"), System.Drawing.Image)
+        Me.voletlateral.ContextMenuStrip = Me.Menu
         Me.voletlateral.Dock = System.Windows.Forms.DockStyle.Left
         Me.voletlateral.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Menu_Home, Me.Menu_Back, Me.Menu_Forward, Me.Menu_Stop, Me.Menu_Refresh, Me.Menu_Fight, Me.Menu_Favos, Me.Menu_Share, Me.Menu_Settings, Me.Menu_Lock, Me.Menu_FullScr, Me.Menu_Memo})
         Me.voletlateral.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table
@@ -497,6 +501,25 @@ Partial Class Fenetre_Principale
         Me.voletlateral.Size = New System.Drawing.Size(160, 607)
         Me.voletlateral.TabIndex = 1
         Me.voletlateral.Text = "MenuStrip1"
+        '
+        'Menu
+        '
+        Me.Menu.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Menu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2})
+        Me.Menu.Name = "Menu"
+        Me.Menu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.Menu.Size = New System.Drawing.Size(135, 28)
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.Font = New System.Drawing.Font("Segoe UI Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripMenuItem2.ForeColor = System.Drawing.Color.Gray
+        Me.ToolStripMenuItem2.Image = CType(resources.GetObject("ToolStripMenuItem2.Image"), System.Drawing.Image)
+        Me.ToolStripMenuItem2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ToolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(134, 24)
+        Me.ToolStripMenuItem2.Text = "Un bug ?"
         '
         'Menu_Home
         '
@@ -642,65 +665,65 @@ Partial Class Fenetre_Principale
         Me.Menu_Memo.Text = "Post-It"
         Me.Menu_Memo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Settings
+        'ABlueflap_Settings
         '
-        Me.Settings.AutoScroll = True
-        Me.Settings.AutoScrollMargin = New System.Drawing.Size(15, 15)
-        Me.Settings.Controls.Add(Me.stng_More)
-        Me.Settings.Controls.Add(Me.stng_github)
-        Me.Settings.Controls.Add(Me.Label10)
-        Me.Settings.Controls.Add(Me.stng_simpleworld)
-        Me.Settings.Controls.Add(Me.Label2)
-        Me.Settings.Controls.Add(Me.Button1)
-        Me.Settings.Controls.Add(Me.Stng_ShowLicense)
-        Me.Settings.Controls.Add(Me.Label17)
-        Me.Settings.Controls.Add(Me.Stng_bluestart_checkbox)
-        Me.Settings.Controls.Add(Me.Stng_Volet_Mousehover_agrandir)
-        Me.Settings.Controls.Add(Me.Stng_SupprCacheCookies)
-        Me.Settings.Controls.Add(Me.Stng_MaximizedWindow)
-        Me.Settings.Controls.Add(Me.Label9)
-        Me.Settings.Controls.Add(Me.Stng_SupprHisto)
-        Me.Settings.Controls.Add(Me.Stng_TouchUI)
-        Me.Settings.Controls.Add(Me.Label13)
-        Me.Settings.Controls.Add(Me.Label12)
-        Me.Settings.Controls.Add(Me.Label11)
-        Me.Settings.Controls.Add(Me.Stng_OptionsInternet)
-        Me.Settings.Controls.Add(Me.PictureBox8)
-        Me.Settings.Controls.Add(Me.PictureBox7)
-        Me.Settings.Controls.Add(Me.PictureBox6)
-        Me.Settings.Controls.Add(Me.PictureBox5)
-        Me.Settings.Controls.Add(Me.PictureBox4)
-        Me.Settings.Controls.Add(Me.PictureBox3)
-        Me.Settings.Controls.Add(Me.fullscreen_checkbox)
-        Me.Settings.Controls.Add(Me.lock_checkbox)
-        Me.Settings.Controls.Add(Me.share_checkbox)
-        Me.Settings.Controls.Add(Me.favo_checkbox)
-        Me.Settings.Controls.Add(Me.Sfight_Checkbox)
-        Me.Settings.Controls.Add(Me.Home_checkbox)
-        Me.Settings.Controls.Add(Me.persoico)
-        Me.Settings.Controls.Add(Me.Stng_VersionSystem)
-        Me.Settings.Controls.Add(Me.Label6)
-        Me.Settings.Controls.Add(Me.Label5)
-        Me.Settings.Controls.Add(Me.Label4)
-        Me.Settings.Controls.Add(Me.Stng_MPActiv)
-        Me.Settings.Controls.Add(Me.Stng_MP_confirm)
-        Me.Settings.Controls.Add(Me.Stng_MP)
-        Me.Settings.Controls.Add(Me.Label3)
-        Me.Settings.Controls.Add(Me.Stng_Volet_reduire)
-        Me.Settings.Controls.Add(Me.Stng_ErreurURLHomepage)
-        Me.Settings.Controls.Add(Me.Stng_HomePage_Url)
-        Me.Settings.Controls.Add(Me.label1)
-        Me.Settings.Controls.Add(Me.Settings_Back)
-        Me.Settings.Controls.Add(Me.Stng_MoteurRecherche_URL)
-        Me.Settings.Controls.Add(Me.Stng_MoteurRecherche_choose)
-        Me.Settings.Controls.Add(Me.Label)
-        Me.Settings.Controls.Add(Me.Settings_title)
-        Me.Settings.Controls.Add(Me.ShapeContainer1)
-        Me.Settings.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Settings.Location = New System.Drawing.Point(0, 0)
-        Me.Settings.Name = "Settings"
-        Me.Settings.Size = New System.Drawing.Size(1117, 607)
-        Me.Settings.TabIndex = 1
+        Me.ABlueflap_Settings.AutoScroll = True
+        Me.ABlueflap_Settings.AutoScrollMargin = New System.Drawing.Size(15, 15)
+        Me.ABlueflap_Settings.Controls.Add(Me.stng_More)
+        Me.ABlueflap_Settings.Controls.Add(Me.stng_github)
+        Me.ABlueflap_Settings.Controls.Add(Me.Label10)
+        Me.ABlueflap_Settings.Controls.Add(Me.stng_simpleworld)
+        Me.ABlueflap_Settings.Controls.Add(Me.Label2)
+        Me.ABlueflap_Settings.Controls.Add(Me.Button1)
+        Me.ABlueflap_Settings.Controls.Add(Me.Stng_ShowLicense)
+        Me.ABlueflap_Settings.Controls.Add(Me.Label17)
+        Me.ABlueflap_Settings.Controls.Add(Me.Stng_bluestart_checkbox)
+        Me.ABlueflap_Settings.Controls.Add(Me.Stng_Volet_Mousehover_agrandir)
+        Me.ABlueflap_Settings.Controls.Add(Me.Stng_SupprCacheCookies)
+        Me.ABlueflap_Settings.Controls.Add(Me.Stng_MaximizedWindow)
+        Me.ABlueflap_Settings.Controls.Add(Me.Label9)
+        Me.ABlueflap_Settings.Controls.Add(Me.Stng_SupprHisto)
+        Me.ABlueflap_Settings.Controls.Add(Me.Stng_TouchUI)
+        Me.ABlueflap_Settings.Controls.Add(Me.Label13)
+        Me.ABlueflap_Settings.Controls.Add(Me.Label12)
+        Me.ABlueflap_Settings.Controls.Add(Me.Label11)
+        Me.ABlueflap_Settings.Controls.Add(Me.Stng_OptionsInternet)
+        Me.ABlueflap_Settings.Controls.Add(Me.PictureBox8)
+        Me.ABlueflap_Settings.Controls.Add(Me.PictureBox7)
+        Me.ABlueflap_Settings.Controls.Add(Me.PictureBox6)
+        Me.ABlueflap_Settings.Controls.Add(Me.PictureBox5)
+        Me.ABlueflap_Settings.Controls.Add(Me.PictureBox4)
+        Me.ABlueflap_Settings.Controls.Add(Me.PictureBox3)
+        Me.ABlueflap_Settings.Controls.Add(Me.fullscreen_checkbox)
+        Me.ABlueflap_Settings.Controls.Add(Me.lock_checkbox)
+        Me.ABlueflap_Settings.Controls.Add(Me.share_checkbox)
+        Me.ABlueflap_Settings.Controls.Add(Me.favo_checkbox)
+        Me.ABlueflap_Settings.Controls.Add(Me.Sfight_Checkbox)
+        Me.ABlueflap_Settings.Controls.Add(Me.Home_checkbox)
+        Me.ABlueflap_Settings.Controls.Add(Me.persoico)
+        Me.ABlueflap_Settings.Controls.Add(Me.Stng_VersionSystem)
+        Me.ABlueflap_Settings.Controls.Add(Me.Label6)
+        Me.ABlueflap_Settings.Controls.Add(Me.Label5)
+        Me.ABlueflap_Settings.Controls.Add(Me.Label4)
+        Me.ABlueflap_Settings.Controls.Add(Me.Stng_MPActiv)
+        Me.ABlueflap_Settings.Controls.Add(Me.Stng_MP_confirm)
+        Me.ABlueflap_Settings.Controls.Add(Me.Stng_MP)
+        Me.ABlueflap_Settings.Controls.Add(Me.Label3)
+        Me.ABlueflap_Settings.Controls.Add(Me.Stng_Volet_reduire)
+        Me.ABlueflap_Settings.Controls.Add(Me.Stng_ErreurURLHomepage)
+        Me.ABlueflap_Settings.Controls.Add(Me.Stng_HomePage_Url)
+        Me.ABlueflap_Settings.Controls.Add(Me.label1)
+        Me.ABlueflap_Settings.Controls.Add(Me.Settings_Back)
+        Me.ABlueflap_Settings.Controls.Add(Me.Stng_MoteurRecherche_URL)
+        Me.ABlueflap_Settings.Controls.Add(Me.Stng_MoteurRecherche_choose)
+        Me.ABlueflap_Settings.Controls.Add(Me.Label)
+        Me.ABlueflap_Settings.Controls.Add(Me.Settings_title)
+        Me.ABlueflap_Settings.Controls.Add(Me.ShapeContainer1)
+        Me.ABlueflap_Settings.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ABlueflap_Settings.Location = New System.Drawing.Point(0, 0)
+        Me.ABlueflap_Settings.Name = "ABlueflap_Settings"
+        Me.ABlueflap_Settings.Size = New System.Drawing.Size(1117, 607)
+        Me.ABlueflap_Settings.TabIndex = 1
         '
         'stng_More
         '
@@ -1297,20 +1320,20 @@ Partial Class Fenetre_Principale
         Me.RectangleShape1.Name = "RectangleShape1"
         Me.RectangleShape1.Size = New System.Drawing.Size(583, 36)
         '
-        'Fight
+        'ABlueflap_Fight
         '
-        Me.Fight.Controls.Add(Me.SplitContainer1)
-        Me.Fight.Controls.Add(Me.SrchF_Fightbutton)
-        Me.Fight.Controls.Add(Me.SrchF_ChoixB)
-        Me.Fight.Controls.Add(Me.SrchF_ChoixA)
-        Me.Fight.Controls.Add(Me.SrchF_Searchbox)
-        Me.Fight.Controls.Add(Me.SrchF_Back)
-        Me.Fight.Controls.Add(Me.ShapeContainer2)
-        Me.Fight.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Fight.Location = New System.Drawing.Point(0, 0)
-        Me.Fight.Name = "Fight"
-        Me.Fight.Size = New System.Drawing.Size(1117, 607)
-        Me.Fight.TabIndex = 2
+        Me.ABlueflap_Fight.Controls.Add(Me.SplitContainer1)
+        Me.ABlueflap_Fight.Controls.Add(Me.SrchF_Fightbutton)
+        Me.ABlueflap_Fight.Controls.Add(Me.SrchF_ChoixB)
+        Me.ABlueflap_Fight.Controls.Add(Me.SrchF_ChoixA)
+        Me.ABlueflap_Fight.Controls.Add(Me.SrchF_Searchbox)
+        Me.ABlueflap_Fight.Controls.Add(Me.SrchF_Back)
+        Me.ABlueflap_Fight.Controls.Add(Me.ShapeContainer2)
+        Me.ABlueflap_Fight.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ABlueflap_Fight.Location = New System.Drawing.Point(0, 0)
+        Me.ABlueflap_Fight.Name = "ABlueflap_Fight"
+        Me.ABlueflap_Fight.Size = New System.Drawing.Size(1117, 607)
+        Me.ABlueflap_Fight.TabIndex = 2
         '
         'SplitContainer1
         '
@@ -1427,14 +1450,14 @@ Partial Class Fenetre_Principale
         Me.LineShape1.Y1 = 55
         Me.LineShape1.Y2 = 55
         '
-        'Verrouillage
+        'ABlueflap_Verrouillage
         '
-        Me.Verrouillage.Controls.Add(Me.Verr_BlackEffect)
-        Me.Verrouillage.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Verrouillage.Location = New System.Drawing.Point(0, 0)
-        Me.Verrouillage.Name = "Verrouillage"
-        Me.Verrouillage.Size = New System.Drawing.Size(1117, 607)
-        Me.Verrouillage.TabIndex = 3
+        Me.ABlueflap_Verrouillage.Controls.Add(Me.Verr_BlackEffect)
+        Me.ABlueflap_Verrouillage.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ABlueflap_Verrouillage.Location = New System.Drawing.Point(0, 0)
+        Me.ABlueflap_Verrouillage.Name = "ABlueflap_Verrouillage"
+        Me.ABlueflap_Verrouillage.Size = New System.Drawing.Size(1117, 607)
+        Me.ABlueflap_Verrouillage.TabIndex = 3
         '
         'Verr_BlackEffect
         '
@@ -1544,24 +1567,24 @@ Partial Class Fenetre_Principale
         Me.Verr_WrongMp.Text = "Mot de passe incorrect"
         Me.Verr_WrongMp.Visible = False
         '
-        'Infos
+        'ABlueflap_Infos
         '
-        Me.Infos.BackgroundImage = CType(resources.GetObject("Infos.BackgroundImage"), System.Drawing.Image)
-        Me.Infos.Controls.Add(Me.Infos_code_source)
-        Me.Infos.Controls.Add(Me.Infos_Save)
-        Me.Infos.Controls.Add(Me.Infos_Print)
-        Me.Infos.Controls.Add(Me.Infos_Loading)
-        Me.Infos.Controls.Add(Me.Infos_Loader)
-        Me.Infos.Controls.Add(Me.Infos_Trident_Browser_Recup_Infos)
-        Me.Infos.Controls.Add(Me.Infos_CodeShowHide)
-        Me.Infos.Controls.Add(Me.Infos_back)
-        Me.Infos.Controls.Add(Me.Infos_Adresse)
-        Me.Infos.Controls.Add(Me.Infos_Titre)
-        Me.Infos.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Infos.Location = New System.Drawing.Point(0, 0)
-        Me.Infos.Name = "Infos"
-        Me.Infos.Size = New System.Drawing.Size(1117, 607)
-        Me.Infos.TabIndex = 4
+        Me.ABlueflap_Infos.BackgroundImage = CType(resources.GetObject("ABlueflap_Infos.BackgroundImage"), System.Drawing.Image)
+        Me.ABlueflap_Infos.Controls.Add(Me.Infos_code_source)
+        Me.ABlueflap_Infos.Controls.Add(Me.Infos_Save)
+        Me.ABlueflap_Infos.Controls.Add(Me.Infos_Print)
+        Me.ABlueflap_Infos.Controls.Add(Me.Infos_Loading)
+        Me.ABlueflap_Infos.Controls.Add(Me.Infos_Loader)
+        Me.ABlueflap_Infos.Controls.Add(Me.Infos_Trident_Browser_Recup_Infos)
+        Me.ABlueflap_Infos.Controls.Add(Me.Infos_CodeShowHide)
+        Me.ABlueflap_Infos.Controls.Add(Me.Infos_back)
+        Me.ABlueflap_Infos.Controls.Add(Me.Infos_Adresse)
+        Me.ABlueflap_Infos.Controls.Add(Me.Infos_Titre)
+        Me.ABlueflap_Infos.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ABlueflap_Infos.Location = New System.Drawing.Point(0, 0)
+        Me.ABlueflap_Infos.Name = "ABlueflap_Infos"
+        Me.ABlueflap_Infos.Size = New System.Drawing.Size(1117, 607)
+        Me.ABlueflap_Infos.TabIndex = 4
         '
         'Infos_code_source
         '
@@ -1575,6 +1598,7 @@ Partial Class Fenetre_Principale
         Me.Infos_code_source.CharWidth = 8
         Me.Infos_code_source.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.Infos_code_source.DisabledColor = System.Drawing.Color.FromArgb(CType(CType(100, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.Infos_code_source.Font = New System.Drawing.Font("Courier New", 9.75!)
         Me.Infos_code_source.IndentBackColor = System.Drawing.SystemColors.Control
         Me.Infos_code_source.IsReplaceMode = False
         Me.Infos_code_source.Location = New System.Drawing.Point(74, 194)
@@ -1713,27 +1737,27 @@ Partial Class Fenetre_Principale
         '
         Me.OpenFileDialog1.FileName = "Note"
         '
-        'Bluestart
+        'ABlueflap_Bluestart
         '
-        Me.Bluestart.BackColor = System.Drawing.SystemColors.Control
-        Me.Bluestart.BackgroundImage = CType(resources.GetObject("Bluestart.BackgroundImage"), System.Drawing.Image)
-        Me.Bluestart.Controls.Add(Me.BS_Searchfight)
-        Me.Bluestart.Controls.Add(Me.BS_Browser)
-        Me.Bluestart.Controls.Add(Me.Bs_Favbulle)
-        Me.Bluestart.Controls.Add(Me.BS_Fav)
-        Me.Bluestart.Controls.Add(Me.BS_Date)
-        Me.Bluestart.Controls.Add(Me.Label14)
-        Me.Bluestart.Controls.Add(Me.BS_Settings)
-        Me.Bluestart.Controls.Add(Me.Pop)
-        Me.Bluestart.Controls.Add(Me.PictureBox9)
-        Me.Bluestart.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Global.Blueflap.My.MySettings.Default, "Hey", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
-        Me.Bluestart.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Bluestart.Location = New System.Drawing.Point(0, 0)
-        Me.Bluestart.Name = "Bluestart"
-        Me.Bluestart.Size = New System.Drawing.Size(1117, 607)
-        Me.Bluestart.TabIndex = 5
-        Me.Bluestart.Tag = Global.Blueflap.My.MySettings.Default.Hey
-        Me.Bluestart.Visible = False
+        Me.ABlueflap_Bluestart.BackColor = System.Drawing.SystemColors.Control
+        Me.ABlueflap_Bluestart.BackgroundImage = CType(resources.GetObject("ABlueflap_Bluestart.BackgroundImage"), System.Drawing.Image)
+        Me.ABlueflap_Bluestart.Controls.Add(Me.BS_Searchfight)
+        Me.ABlueflap_Bluestart.Controls.Add(Me.BS_Browser)
+        Me.ABlueflap_Bluestart.Controls.Add(Me.Bs_Favbulle)
+        Me.ABlueflap_Bluestart.Controls.Add(Me.BS_Fav)
+        Me.ABlueflap_Bluestart.Controls.Add(Me.BS_Date)
+        Me.ABlueflap_Bluestart.Controls.Add(Me.Label14)
+        Me.ABlueflap_Bluestart.Controls.Add(Me.BS_Settings)
+        Me.ABlueflap_Bluestart.Controls.Add(Me.Pop)
+        Me.ABlueflap_Bluestart.Controls.Add(Me.PictureBox9)
+        Me.ABlueflap_Bluestart.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Global.Blueflap.My.MySettings.Default, "Hey", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.ABlueflap_Bluestart.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ABlueflap_Bluestart.Location = New System.Drawing.Point(0, 0)
+        Me.ABlueflap_Bluestart.Name = "ABlueflap_Bluestart"
+        Me.ABlueflap_Bluestart.Size = New System.Drawing.Size(1117, 607)
+        Me.ABlueflap_Bluestart.TabIndex = 5
+        Me.ABlueflap_Bluestart.Tag = Global.Blueflap.My.MySettings.Default.Hey
+        Me.ABlueflap_Bluestart.Visible = False
         '
         'BS_Searchfight
         '
@@ -1935,18 +1959,18 @@ Partial Class Fenetre_Principale
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1117, 607)
-        Me.Controls.Add(Me.Navigateur)
-        Me.Controls.Add(Me.Settings)
-        Me.Controls.Add(Me.Infos)
-        Me.Controls.Add(Me.Fight)
-        Me.Controls.Add(Me.Verrouillage)
-        Me.Controls.Add(Me.Bluestart)
+        Me.Controls.Add(Me.ABlueflap_Navigateur)
+        Me.Controls.Add(Me.ABlueflap_Settings)
+        Me.Controls.Add(Me.ABlueflap_Infos)
+        Me.Controls.Add(Me.ABlueflap_Fight)
+        Me.Controls.Add(Me.ABlueflap_Verrouillage)
+        Me.Controls.Add(Me.ABlueflap_Bluestart)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MinimumSize = New System.Drawing.Size(948, 39)
         Me.Name = "Fenetre_Principale"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Blueflap"
-        Me.Navigateur.ResumeLayout(False)
+        Me.ABlueflap_Navigateur.ResumeLayout(False)
         CType(Me.Notif_internet, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -1959,32 +1983,33 @@ Partial Class Fenetre_Principale
         CType(Me.Loader, System.ComponentModel.ISupportInitialize).EndInit()
         Me.voletlateral.ResumeLayout(False)
         Me.voletlateral.PerformLayout()
-        Me.Settings.ResumeLayout(False)
-        Me.Settings.PerformLayout()
+        Me.Menu.ResumeLayout(False)
+        Me.ABlueflap_Settings.ResumeLayout(False)
+        Me.ABlueflap_Settings.PerformLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Fight.ResumeLayout(False)
-        Me.Fight.PerformLayout()
+        Me.ABlueflap_Fight.ResumeLayout(False)
+        Me.ABlueflap_Fight.PerformLayout()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
-        Me.Verrouillage.ResumeLayout(False)
+        Me.ABlueflap_Verrouillage.ResumeLayout(False)
         Me.Verr_BlackEffect.ResumeLayout(False)
         Me.Verr_BlackEffect.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        Me.Infos.ResumeLayout(False)
-        Me.Infos.PerformLayout()
+        Me.ABlueflap_Infos.ResumeLayout(False)
+        Me.ABlueflap_Infos.PerformLayout()
         CType(Me.Infos_code_source, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Infos_Loader, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Bluestart.ResumeLayout(False)
-        Me.Bluestart.PerformLayout()
+        Me.ABlueflap_Bluestart.ResumeLayout(False)
+        Me.ABlueflap_Bluestart.PerformLayout()
         Me.Bs_Favbulle.ResumeLayout(False)
         Me.Label14.ResumeLayout(False)
         Me.Label14.PerformLayout()
@@ -1993,11 +2018,11 @@ Partial Class Fenetre_Principale
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Navigateur As System.Windows.Forms.Panel
-    Friend WithEvents Settings As System.Windows.Forms.Panel
-    Friend WithEvents Fight As System.Windows.Forms.Panel
-    Friend WithEvents Verrouillage As System.Windows.Forms.Panel
-    Friend WithEvents Infos As System.Windows.Forms.Panel
+    Friend WithEvents ABlueflap_Navigateur As System.Windows.Forms.Panel
+    Friend WithEvents ABlueflap_Settings As System.Windows.Forms.Panel
+    Friend WithEvents ABlueflap_Fight As System.Windows.Forms.Panel
+    Friend WithEvents ABlueflap_Verrouillage As System.Windows.Forms.Panel
+    Friend WithEvents ABlueflap_Infos As System.Windows.Forms.Panel
     Public WithEvents voletlateral As System.Windows.Forms.MenuStrip
     Friend WithEvents Menu_Home As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Menu_Back As System.Windows.Forms.ToolStripMenuItem
@@ -2103,7 +2128,7 @@ Partial Class Fenetre_Principale
     Friend WithEvents Infos_code_source As FastColoredTextBoxNS.FastColoredTextBox
     Friend WithEvents Stng_Volet_Mousehover_agrandir As System.Windows.Forms.CheckBox
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
-    Friend WithEvents Bluestart As System.Windows.Forms.Panel
+    Friend WithEvents ABlueflap_Bluestart As System.Windows.Forms.Panel
     Friend WithEvents PictureBox9 As System.Windows.Forms.PictureBox
     Friend WithEvents BS_Settings As System.Windows.Forms.Button
     Friend WithEvents BS_Date As System.Windows.Forms.Label
@@ -2132,5 +2157,7 @@ Partial Class Fenetre_Principale
     Friend WithEvents LineShape2 As Microsoft.VisualBasic.PowerPacks.LineShape
     Friend WithEvents stng_More As System.Windows.Forms.Button
     Friend WithEvents Menu_Memo As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Menu As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
 
 End Class

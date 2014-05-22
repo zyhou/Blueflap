@@ -34,7 +34,7 @@
     End Sub
 
     Private Sub ToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles Menu_Settings.Click
-        Settings.BringToFront()
+        ABlueflap_Settings.BringToFront()
         If Stng_MP_confirm.Text = Stng_MP.Text Then
             Stng_MP.Enabled = True
         ElseIf Stng_MP.Text = "" Then
@@ -45,7 +45,7 @@
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Settings_Back.Click
-        Navigateur.BringToFront()
+        ABlueflap_Navigateur.BringToFront()
 
         If Home_checkbox.Checked = True Then
             Menu_Home.Visible = True
@@ -155,14 +155,14 @@
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Stng_MPActiv.Checked = True Then
-            Verrouillage.BringToFront()
+            ABlueflap_Verrouillage.BringToFront()
         Else
             If Stng_bluestart_checkbox.Checked = True Then
-                Bluestart.Visible = True
-                Bluestart.BringToFront()
+                ABlueflap_Bluestart.Visible = True
+                ABlueflap_Bluestart.BringToFront()
             Else
-                Navigateur.BringToFront()
-                Verrouillage.Visible = False
+                ABlueflap_Navigateur.BringToFront()
+                ABlueflap_Verrouillage.Visible = False
             End If
         End If
 
@@ -239,11 +239,11 @@
         Verr_BlackEffect.Left = (Me.Width - Verr_BlackEffect.Width) / 2
         Verr_Time.Text = System.DateTime.Now.ToString("HH:mm")
         Verr_Date.Text = System.DateTime.Now.ToString("dddd dd MMMM yyyy")
-        If Not Bluestart.Tag Is DBNull.Value Then
-            If System.IO.File.Exists(Bluestart.Tag) Then
-                Dim fileeName As String = System.IO.Path.GetFullPath(Bluestart.Tag)
-                Bluestart.BackgroundImage = Image.FromFile(Bluestart.Tag)
-                Verrouillage.BackgroundImage = Image.FromFile(Bluestart.Tag)
+        If Not ABlueflap_Bluestart.Tag Is DBNull.Value Then
+            If System.IO.File.Exists(ABlueflap_Bluestart.Tag) Then
+                Dim fileeName As String = System.IO.Path.GetFullPath(ABlueflap_Bluestart.Tag)
+                ABlueflap_Bluestart.BackgroundImage = Image.FromFile(ABlueflap_Bluestart.Tag)
+                ABlueflap_Verrouillage.BackgroundImage = Image.FromFile(ABlueflap_Bluestart.Tag)
             End If
         End If
     End Sub
@@ -260,8 +260,8 @@
 
     Private Sub ToolStripMenuItem5_Click(sender As Object, e As EventArgs) Handles Menu_Home.Click
         If Stng_bluestart_checkbox.Checked = True Then
-            Bluestart.Visible = True
-            Bluestart.BringToFront()
+            ABlueflap_Bluestart.Visible = True
+            ABlueflap_Bluestart.BringToFront()
         Else
             If Stng_HomePage_Url.Text.Contains("http://") Then
                 Web.Source = New Uri(Stng_HomePage_Url.Text)
@@ -318,19 +318,19 @@
     End Sub
 
     Private Sub ToolStripMenuItem4_Click(sender As Object, e As EventArgs) Handles Menu_Share.Click
-        Infos.BringToFront()
+        ABlueflap_Infos.BringToFront()
         Infos_Trident_Browser_Recup_Infos.Navigate(Web.Source)
     End Sub
 
     Private Sub Back_info_Click(sender As Object, e As EventArgs) Handles Infos_back.Click
-        Navigateur.BringToFront()
+        ABlueflap_Navigateur.BringToFront()
         Infos_Trident_Browser_Recup_Infos.Navigate("about:blank")
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Verr_AcceptButt.Click
         If Verr_Textbox.Text = Stng_MP.Text Then
-            Navigateur.BringToFront()
-            Verrouillage.Visible = False
+            ABlueflap_Navigateur.BringToFront()
+            ABlueflap_Verrouillage.Visible = False
         Else
             Verr_WrongMp.Visible = True
         End If
@@ -344,11 +344,11 @@
         End If
     End Sub
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles SrchF_Back.Click
-        Navigateur.BringToFront()
+        ABlueflap_Navigateur.BringToFront()
     End Sub
 
     Private Sub ToolStripMenuItem6_Click(sender As Object, e As EventArgs) Handles Menu_Fight.Click
-        Fight.BringToFront()
+        ABlueflap_Fight.BringToFront()
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles SrchF_Fightbutton.Click
@@ -560,7 +560,7 @@
         End If
     End Sub
 
-    Private Sub Verrouillage_MouseMove(sender As Object, e As MouseEventArgs) Handles Verrouillage.MouseMove
+    Private Sub Verrouillage_MouseMove(sender As Object, e As MouseEventArgs) Handles ABlueflap_Verrouillage.MouseMove
         Verr_Time.Text = System.DateTime.Now.ToString("HH:mm")
         Verr_Date.Text = System.DateTime.Now.ToString("dddd dd MMMM yyyy")
     End Sub
@@ -648,7 +648,7 @@
     End Sub
 
     Private Sub ToolStripMenuItem7_Click(sender As Object, e As EventArgs)
-        Bluestart.BringToFront()
+        ABlueflap_Bluestart.BringToFront()
     End Sub
 
     Private Sub Form1_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
@@ -677,8 +677,8 @@
         Else
             MessageBox.Show("Veuillez vérifier les paramètres du moteur de recherche")
         End If
-        Navigateur.BringToFront()
-        Bluestart.Visible = False
+        ABlueflap_Navigateur.BringToFront()
+        ABlueflap_Bluestart.Visible = False
     End Sub
 
     Private Sub TextBox6_Leave(sender As Object, e As EventArgs) Handles Bs_Searchbox.Leave
@@ -690,8 +690,8 @@
         open.Filter = "Image Files(*.png; *.jpg; *.bmp)|*.png; *.jpg; *.bmp"
         If open.ShowDialog() = DialogResult.OK Then
             Dim fileName As String = System.IO.Path.GetFullPath(open.FileName)
-            Bluestart.BackgroundImage = New Bitmap(open.FileName)
-            Bluestart.Tag = fileName
+            ABlueflap_Bluestart.BackgroundImage = New Bitmap(open.FileName)
+            ABlueflap_Bluestart.Tag = fileName
         End If
     End Sub
 
@@ -708,8 +708,8 @@
         If BS_Favlist.SelectedItem = "" Then
         Else
             Web.Source = New Uri(BS_Favlist.SelectedItem)
-            Navigateur.BringToFront()
-            Bluestart.Visible = False
+            ABlueflap_Navigateur.BringToFront()
+            ABlueflap_Bluestart.Visible = False
         End If
     End Sub
 
@@ -740,13 +740,13 @@
     End Sub
 
     Private Sub Button20_Click_1(sender As Object, e As EventArgs) Handles BS_Browser.Click
-        Navigateur.BringToFront()
-        Bluestart.Visible = False
+        ABlueflap_Navigateur.BringToFront()
+        ABlueflap_Bluestart.Visible = False
     End Sub
 
     Private Sub Button19_Click(sender As Object, e As EventArgs) Handles BS_Searchfight.Click
-        Fight.BringToFront()
-        Bluestart.Visible = False
+        ABlueflap_Fight.BringToFront()
+        ABlueflap_Bluestart.Visible = False
     End Sub
 
     Private Sub Textenotif_Click(sender As Object, e As EventArgs) Handles Textenotif.Click
@@ -790,5 +790,17 @@
 
     Private Sub Menu_Memo_Click(sender As Object, e As EventArgs) Handles Menu_Memo.Click
         Form4.Show()
+    End Sub
+
+    Private Sub SmartAdressbox_TextChanged(sender As Object, e As EventArgs) Handles SmartAdressbox.TextChanged
+        If SmartAdressbox.Text.Contains("https://") Then
+            SmartAdressbox.ForeColor = Color.DarkGreen
+        Else
+            SmartAdressbox.ForeColor = Color.Black
+        End If
+
+    End Sub
+    Private Sub ToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem2.Click
+        Process.Start("https://github.com/SimpleSoftwares/Blueflap/issues")
     End Sub
 End Class

@@ -11,8 +11,8 @@
     End Sub
 
     Private Sub Accept_Click(sender As Object, e As EventArgs) Handles Accept.Click
-        Fenetre_Principale.Verrouillage.Visible = True
-        Fenetre_Principale.Verrouillage.BringToFront()
+        Fenetre_Principale.ABlueflap_Verrouillage.Visible = True
+        Fenetre_Principale.ABlueflap_Verrouillage.BringToFront()
         Me.Close()
     End Sub
 End Class
