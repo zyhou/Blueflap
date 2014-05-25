@@ -507,6 +507,11 @@
             Next
         End If
 
+        If SmartAdressbox.Text.Contains("https://") Then
+            SmartAdressbox.ForeColor = Color.DarkGreen
+        Else
+            SmartAdressbox.ForeColor = Color.Black
+        End If
     End Sub
 
     Private Sub Awesomium_Windows_Forms_WebControl_Crashed(sender As Object, e As Awesomium.Core.CrashedEventArgs) Handles Web.Crashed
@@ -720,21 +725,6 @@
             Bs_Favbulle.Visible = False
         End If
     End Sub
-    Private Sub AMouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
-        drag = True 'Sets the variable drag to true.
-        mousex = Windows.Forms.Cursor.Position.X - Me.Left 'Sets variable mousex
-        mousey = Windows.Forms.Cursor.Position.Y - Me.Top 'Sets variable mousey
-    End Sub
-    Private Sub AMouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
-        If drag Then
-            Me.Top = Windows.Forms.Cursor.Position.Y - mousey
-            Me.Left = Windows.Forms.Cursor.Position.X - mousex
-        End If
-    End Sub
-    Private Sub AMouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
-        drag = False 'Sets drag to false, so the form does not move according to the code in MouseMove
-    End Sub
-
     Private Sub Button20_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
@@ -793,12 +783,16 @@
     End Sub
 
     Private Sub SmartAdressbox_TextChanged(sender As Object, e As EventArgs) Handles SmartAdressbox.TextChanged
-        If SmartAdressbox.Text.Contains("https://") Then
-            SmartAdressbox.ForeColor = Color.DarkGreen
-        Else
+        If Web.IsLoading = True Then
             SmartAdressbox.ForeColor = Color.Black
+        Else
+            Dim textArray = SmartAdressbox.Text.Split(" ")
+            If (SmartAdressbox.Text.Contains(".") = True And SmartAdressbox.Text.Contains(" ") = False And SmartAdressbox.Text.Contains(" .") = False And SmartAdressbox.Text.Contains(". ") = False) Or textArray(0).Contains(":/") = True Or textArray(0).Contains(":\") Then
+                SmartAdressbox.ForeColor = Color.DodgerBlue
+            Else
+                SmartAdressbox.ForeColor = Color.Black
+            End If
         End If
-
     End Sub
     Private Sub ToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem2.Click
         Process.Start("https://github.com/SimpleSoftwares/Blueflap/issues")
