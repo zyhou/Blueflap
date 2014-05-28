@@ -27,6 +27,7 @@ Partial Class Form2
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Accept = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.MetroControlBox1 = New MetroControls.MetroControlBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -41,7 +42,7 @@ Partial Class Form2
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(0, -2)
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(89, 69)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -71,21 +72,38 @@ Partial Class Form2
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "Entrez votre mot de passe pour verrouiller Blueflap"
         '
+        'MetroControlBox1
+        '
+        Me.MetroControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.MetroControlBox1.BoxClose = True
+        Me.MetroControlBox1.BoxMaximize = False
+        Me.MetroControlBox1.BoxMinimize = False
+        Me.MetroControlBox1.FormHeight = Nothing
+        Me.MetroControlBox1.FormWidth = Nothing
+        Me.MetroControlBox1.Location = New System.Drawing.Point(387, -2)
+        Me.MetroControlBox1.Name = "MetroControlBox1"
+        Me.MetroControlBox1.Size = New System.Drawing.Size(88, 26)
+        Me.MetroControlBox1.TabIndex = 8
+        Me.MetroControlBox1.Text = "MetroControlBox1"
+        Me.MetroControlBox1.UseMetroForm = True
+        '
         'Form2
         '
         Me.AcceptButton = Me.Accept
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(472, 64)
+        Me.ClientSize = New System.Drawing.Size(473, 70)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.MetroControlBox1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Accept)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TextBox1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(489, 86)
+        Me.MinimumSize = New System.Drawing.Size(489, 86)
         Me.Name = "Form2"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Verrouiller ?"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -95,4 +113,5 @@ Partial Class Form2
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Accept As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents MetroControlBox1 As MetroControls.MetroControlBox
 End Class

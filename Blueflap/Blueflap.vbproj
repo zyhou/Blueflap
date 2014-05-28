@@ -29,7 +29,7 @@
     <PublisherName>SimpleWorld</PublisherName>
     <SuiteName>Blueflap 3.x</SuiteName>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>428</ApplicationRevision>
+    <ApplicationRevision>429</ApplicationRevision>
     <ApplicationVersion>3.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -117,8 +117,14 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Awesomium Technologies LLC\Awesomium SDK\1.7.4.2\wrappers\Awesomium.NET\Assemblies\Awesomium.Windows.Forms.dll</HintPath>
     </Reference>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>..\..\..\..\Visual Studio 2010\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
     <Reference Include="FastColoredTextBox">
       <HintPath>..\..\..\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroControls">
+      <HintPath>..\DLL\MetroControls.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -177,6 +183,12 @@
     <Compile Include="Form4.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form5.Designer.vb">
+      <DependentUpon>Form5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form5.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -208,6 +220,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form5.resx">
+      <DependentUpon>Form5.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

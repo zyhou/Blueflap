@@ -569,27 +569,6 @@
         Verr_Time.Text = System.DateTime.Now.ToString("HH:mm")
         Verr_Date.Text = System.DateTime.Now.ToString("dddd dd MMMM yyyy")
     End Sub
-
-    Private Sub Label15_Click(sender As Object, e As EventArgs) Handles fav_Historique.Click
-        Fav_Historique_List.Visible = True
-        fav_Historique.Location = New Point(76, 4)
-        fav_Historique.Font = New Font("Segoe UI Light", 16)
-        fav_Historique.ForeColor = Color.DeepSkyBlue
-        Fav_Favoris.Location = New Point(10, 6)
-        Fav_Favoris.Font = New Font("Segoe UI Light", 14)
-        Fav_Favoris.ForeColor = Color.Gray
-    End Sub
-
-    Private Sub Favs_Click(sender As Object, e As EventArgs) Handles Fav_Favoris.Click
-        Fav_Historique_List.Visible = False
-        fav_Historique.Location = New Point(76, 7)
-        fav_Historique.Font = New Font("Segoe UI Light", 14)
-        fav_Historique.ForeColor = Color.Gray
-        Fav_Favoris.Location = New Point(3, 3)
-        Fav_Favoris.Font = New Font("Segoe UI Light", 16)
-        Fav_Favoris.ForeColor = Color.DeepSkyBlue
-    End Sub
-
     Private Sub Button14_Click(sender As Object, e As EventArgs) Handles Stng_SupprHisto.Click
         My.Settings.Historique.Clear()
         Fav_Historique_List.Items.Clear()
@@ -749,7 +728,7 @@
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-        Process.Start("http://blueflap.weebly.com/help")
+        Process.Start("https://github.com/SimpleSoftwares/Blueflap/issues")
     End Sub
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles stng_simpleworld.Click
@@ -759,25 +738,6 @@
     Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles stng_github.Click
         Process.Start("https://github.com/SimpleSoftwares/Blueflap")
     End Sub
-
-    Private Sub stng_More_Click(sender As Object, e As EventArgs) Handles stng_More.Click
-        If Label2.Visible = True Then
-            LineShape2.Visible = False
-            Label2.Visible = False
-            stng_simpleworld.Visible = False
-            stng_github.Visible = False
-            Label10.Visible = False
-            stng_More.Text = "Plus..."
-        Else
-            LineShape2.Visible = True
-            Label2.Visible = True
-            stng_simpleworld.Visible = True
-            stng_github.Visible = True
-            Label10.Visible = True
-            stng_More.Text = "Moins"
-        End If
-    End Sub
-
     Private Sub Menu_Memo_Click(sender As Object, e As EventArgs) Handles Menu_Memo.Click
         Form4.Show()
     End Sub
@@ -796,5 +756,99 @@
     End Sub
     Private Sub ToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem2.Click
         Process.Start("https://github.com/SimpleSoftwares/Blueflap/issues")
+    End Sub
+
+    Private Sub sett_tab1_Click(sender As Object, e As EventArgs) Handles sett_tab1.Click
+        Sett_TabB.Visible = False
+        Sett_TabC.Visible = False
+        Sett_TabA.Visible = True
+        sett_tab1.LineColorChecked = Color.SteelBlue
+        sett_tab2.LineColorChecked = Color.DeepSkyBlue
+        sett_tab3.LineColorChecked = Color.DeepSkyBlue
+        sett_tab2.Refresh()
+        sett_tab3.Refresh()
+    End Sub
+
+    Private Sub sett_tab2_Click(sender As Object, e As EventArgs) Handles sett_tab2.Click
+        Sett_TabA.Visible = False
+        Sett_TabC.Visible = False
+        Sett_TabB.Visible = True
+        sett_tab1.LineColorChecked = Color.DeepSkyBlue
+        sett_tab2.LineColorChecked = Color.SteelBlue
+        sett_tab3.LineColorChecked = Color.DeepSkyBlue
+        sett_tab1.Refresh()
+        sett_tab3.Refresh()
+    End Sub
+
+    Private Sub sett_tab3_Click(sender As Object, e As EventArgs) Handles sett_tab3.Click
+        Sett_TabB.Visible = False
+        Sett_TabA.Visible = False
+        Sett_TabC.Visible = True
+        sett_tab1.LineColorChecked = Color.DeepSkyBlue
+        sett_tab2.LineColorChecked = Color.DeepSkyBlue
+        sett_tab3.LineColorChecked = Color.SteelBlue
+        sett_tab1.Refresh()
+        sett_tab2.Refresh()
+    End Sub
+
+    Private Sub sett_tab1_MouseEnter(sender As Object, e As EventArgs) Handles sett_tab1.MouseEnter
+        sett_tab1.ForeColor = Color.SteelBlue
+    End Sub
+
+    Private Sub sett_tab1_MouseLeave(sender As Object, e As EventArgs) Handles sett_tab1.MouseLeave
+        sett_tab1.ForeColor = Color.DeepSkyBlue
+    End Sub
+    Private Sub sett_tab2_MouseEnter(sender As Object, e As EventArgs) Handles sett_tab2.MouseEnter
+        sett_tab2.ForeColor = Color.SteelBlue
+    End Sub
+
+    Private Sub sett_tab2_MouseLeave(sender As Object, e As EventArgs) Handles sett_tab2.MouseLeave
+        sett_tab2.ForeColor = Color.DeepSkyBlue
+    End Sub
+    Private Sub sett_tab3_MouseEnter(sender As Object, e As EventArgs) Handles sett_tab3.MouseEnter
+        sett_tab3.ForeColor = Color.SteelBlue
+    End Sub
+
+    Private Sub sett_tab3_MouseLeave(sender As Object, e As EventArgs) Handles sett_tab3.MouseLeave
+        sett_tab3.ForeColor = Color.DeepSkyBlue
+    End Sub
+
+    Private Sub MetroHeaderButton1_Click(sender As Object, e As EventArgs) Handles MetroHeaderButton1.MouseEnter
+        MetroHeaderButton1.ForeColor = Color.DeepSkyBlue
+    End Sub
+    Private Sub MetroHeaderButton1_Sortie(sender As Object, e As EventArgs) Handles MetroHeaderButton1.MouseLeave
+        MetroHeaderButton1.ForeColor = Color.SkyBlue
+    End Sub
+
+    Private Sub MetroHeaderButton1_Click_1(sender As Object, e As EventArgs) Handles MetroHeaderButton1.Click
+        Form5.Show()
+    End Sub
+
+    Private Sub MetroHeaderButton2_Click(sender As Object, e As EventArgs) Handles MetroHeaderButton2.Click
+        Fav_Historique_List.Visible = False
+        MetroHeaderButton2.LineColorChecked = Color.SteelBlue
+        MetroHeaderButton3.LineColorChecked = Color.DeepSkyBlue
+        MetroHeaderButton3.Refresh()
+    End Sub
+
+    Private Sub MetroHeaderButton3_Click(sender As Object, e As EventArgs) Handles MetroHeaderButton3.Click
+        Fav_Historique_List.Visible = True
+        MetroHeaderButton3.LineColorChecked = Color.SteelBlue
+        MetroHeaderButton2.LineColorChecked = Color.DeepSkyBlue
+        MetroHeaderButton2.Refresh()
+    End Sub
+
+    Private Sub MetroHeaderButton2_MouseEnter(sender As Object, e As EventArgs) Handles MetroHeaderButton2.MouseEnter
+        MetroHeaderButton2.ForeColor = Color.SteelBlue
+    End Sub
+    Private Sub MetroHeaderButton2_MouseLeave(sender As Object, e As EventArgs) Handles MetroHeaderButton2.MouseLeave
+        MetroHeaderButton2.ForeColor = Color.DeepSkyBlue
+    End Sub
+
+    Private Sub MetroHeaderButton3_MouseEnter(sender As Object, e As EventArgs) Handles MetroHeaderButton3.MouseEnter
+        MetroHeaderButton3.ForeColor = Color.SteelBlue
+    End Sub
+    Private Sub MetroHeaderButton3_MouseLeave(sender As Object, e As EventArgs) Handles MetroHeaderButton3.MouseLeave
+        MetroHeaderButton3.ForeColor = Color.DeepSkyBlue
     End Sub
 End Class
