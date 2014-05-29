@@ -77,6 +77,11 @@
         Else
             Menu_FullScr.Visible = False
         End If
+        If memo_checkbox.Checked = True Then
+            Menu_Memo.Visible = True
+        Else
+            Menu_Memo.Visible = False
+        End If
         If Stng_Volet_Mousehover_agrandir.Visible = False Then
             Stng_Volet_Mousehover_agrandir.Checked = False
         End If
@@ -232,6 +237,11 @@
             Menu_FullScr.Visible = True
         Else
             Menu_FullScr.Visible = False
+        End If
+        If memo_checkbox.Checked = True Then
+            Menu_Memo.Visible = True
+        Else
+            Menu_Memo.Visible = False
         End If
         Label14.Left = (Me.Width - Label14.Width) / 2
         BS_Date.Text = System.DateTime.Now.ToString("dddd dd MMMM yyyy")
@@ -545,6 +555,7 @@
             Menu_Favos.Font = New Font("Segoe UI Light", 16)
             Menu_Lock.Font = New Font("Segoe UI Light", 16)
             Menu_FullScr.Font = New Font("Segoe UI Light", 16)
+            Menu_Memo.Font = New Font("Segoe UI Light", 16)
             SmartAdressbox.Font = New Font("Segoe UI Light", 13)
             Barre.Height = 40
             AddFavo_Button.Height = 31
@@ -563,6 +574,7 @@
             Menu_Favos.Font = New Font("Segoe UI Light", 11)
             Menu_Lock.Font = New Font("Segoe UI Light", 11)
             Menu_FullScr.Font = New Font("Segoe UI Light", 11)
+            Menu_Memo.Font = New Font("Segoe UI Light", 11)
             SmartAdressbox.Font = New Font("Microsoft Sans Serif", 8)
             Barre.Height = 27
             AddFavo_Button.Height = 20

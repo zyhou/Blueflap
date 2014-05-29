@@ -92,5 +92,8 @@
     <Setting Name="MemoContent" Type="System.String" Scope="User">
       <Value Profile="(Default)">Contenu du Post-It</Value>
     </Setting>
+    <Setting Name="g" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
