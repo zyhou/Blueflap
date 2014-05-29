@@ -442,19 +442,25 @@
             Textenotif.Text = "Page ajoutée aux favoris"
         End If
     End Sub
-
-    Private Sub Favoris_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Fav_fav_List.Click
+    Private Sub Favoris_Norif(sender As Object, e As EventArgs) Handles Fav_fav_List.DoubleClick
         If Fav_fav_List.SelectedItem = "" Then
         Else
             Web.Source = New Uri(Fav_fav_List.SelectedItem)
         End If
     End Sub
-    Private Sub Favoris_Norif(sender As Object, e As EventArgs) Handles Fav_fav_List.DoubleClick
-        fav_notif_suppr.Visible = True
-    End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Fav_Cancel.Click
         fav_notif_suppr.Visible = False
+    End Sub
+    Private Sub SupprimerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SupprimerToolStripMenuItem.Click
+        fav_notif_suppr.Visible = True
+    End Sub
+
+    Private Sub AccéderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AccéderToolStripMenuItem.Click
+        If Fav_fav_List.SelectedItem = "" Then
+        Else
+            Web.Source = New Uri(Fav_fav_List.SelectedItem)
+        End If
     End Sub
 
     Private Sub Button9_Click_1(sender As Object, e As EventArgs) Handles Fav_Confirm.Click
@@ -850,5 +856,15 @@
     End Sub
     Private Sub MetroHeaderButton3_MouseLeave(sender As Object, e As EventArgs) Handles MetroHeaderButton3.MouseLeave
         MetroHeaderButton3.ForeColor = Color.DeepSkyBlue
+    End Sub
+
+    Private Sub Button2_Click_2(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim open As New OpenFileDialog()
+        open.Filter = "Image Files(*.png; *.jpg; *.bmp)|*.png; *.jpg; *.bmp"
+        If open.ShowDialog() = DialogResult.OK Then
+            Dim fileName As String = System.IO.Path.GetFullPath(open.FileName)
+            ABlueflap_Bluestart.BackgroundImage = New Bitmap(open.FileName)
+            ABlueflap_Bluestart.Tag = fileName
+        End If
     End Sub
 End Class

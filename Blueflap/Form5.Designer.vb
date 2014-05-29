@@ -24,24 +24,28 @@ Partial Class Form5
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form5))
         Me.MetroTabControl1 = New MetroControls.MetroTabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.MetroControlBox1 = New MetroControls.MetroControlBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.MetroControlBox1 = New MetroControls.MetroControlBox()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.MetroTabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
         Me.SuspendLayout()
         '
         'MetroTabControl1
@@ -51,6 +55,7 @@ Partial Class Form5
         Me.MetroTabControl1.Controls.Add(Me.TabPage3)
         Me.MetroTabControl1.Controls.Add(Me.TabPage1)
         Me.MetroTabControl1.Controls.Add(Me.TabPage2)
+        Me.MetroTabControl1.Controls.Add(Me.TabPage4)
         Me.MetroTabControl1.DoAnimation = False
         Me.MetroTabControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MetroTabControl1.Font = New System.Drawing.Font("Segoe UI", 9.0!)
@@ -74,80 +79,6 @@ Partial Class Form5
         Me.MetroTabControl1.Speed = 9
         Me.MetroTabControl1.TabIndex = 0
         '
-        'TabPage1
-        '
-        Me.TabPage1.BackColor = System.Drawing.Color.White
-        Me.TabPage1.Controls.Add(Me.Label1)
-        Me.TabPage1.Controls.Add(Me.TextBox1)
-        Me.TabPage1.Controls.Add(Me.PictureBox1)
-        Me.TabPage1.Location = New System.Drawing.Point(124, 4)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(632, 417)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Supprimer un favoris"
-        '
-        'TabPage2
-        '
-        Me.TabPage2.BackColor = System.Drawing.Color.White
-        Me.TabPage2.Controls.Add(Me.Label3)
-        Me.TabPage2.Controls.Add(Me.TextBox3)
-        Me.TabPage2.Location = New System.Drawing.Point(124, 4)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(632, 417)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Afficher l'historique"
-        '
-        'MetroControlBox1
-        '
-        Me.MetroControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MetroControlBox1.BoxClose = True
-        Me.MetroControlBox1.BoxMaximize = True
-        Me.MetroControlBox1.BoxMinimize = True
-        Me.MetroControlBox1.FormHeight = Nothing
-        Me.MetroControlBox1.FormWidth = Nothing
-        Me.MetroControlBox1.Location = New System.Drawing.Point(671, 0)
-        Me.MetroControlBox1.Name = "MetroControlBox1"
-        Me.MetroControlBox1.Size = New System.Drawing.Size(88, 26)
-        Me.MetroControlBox1.TabIndex = 1
-        Me.MetroControlBox1.Text = "MetroControlBox1"
-        Me.MetroControlBox1.UseMetroForm = True
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(159, -68)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(529, 462)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BackColor = System.Drawing.Color.White
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBox1.Location = New System.Drawing.Point(18, 47)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(199, 140)
-        Me.TextBox1.TabIndex = 1
-        Me.TextBox1.Text = resources.GetString("TextBox1.Text")
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 11.0!)
-        Me.Label1.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label1.Location = New System.Drawing.Point(14, 5)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(146, 20)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Supprimer un favoris"
-        '
         'TabPage3
         '
         Me.TabPage3.BackColor = System.Drawing.Color.White
@@ -161,16 +92,15 @@ Partial Class Form5
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Help Center"
         '
-        'Label2
+        'PictureBox2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.0!)
-        Me.Label2.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Label2.Location = New System.Drawing.Point(16, 5)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(198, 25)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Centre d'aide Blueflap"
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 59)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(256, 256)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox2.TabIndex = 2
+        Me.PictureBox2.TabStop = False
         '
         'TextBox2
         '
@@ -184,15 +114,75 @@ Partial Class Form5
         Me.TextBox2.TabIndex = 1
         Me.TextBox2.Text = "Bienvenue sur le centre d'aide Blueflap."
         '
-        'PictureBox2
+        'Label2
         '
-        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(0, 59)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(256, 256)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox2.TabIndex = 2
-        Me.PictureBox2.TabStop = False
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 14.0!)
+        Me.Label2.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.Label2.Location = New System.Drawing.Point(16, 5)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(198, 25)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Centre d'aide Blueflap"
+        '
+        'TabPage1
+        '
+        Me.TabPage1.BackColor = System.Drawing.Color.White
+        Me.TabPage1.Controls.Add(Me.Label1)
+        Me.TabPage1.Controls.Add(Me.TextBox1)
+        Me.TabPage1.Controls.Add(Me.PictureBox1)
+        Me.TabPage1.Location = New System.Drawing.Point(124, 4)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(632, 417)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "Supprimer un favoris"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.Label1.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.Label1.Location = New System.Drawing.Point(14, 5)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(146, 20)
+        Me.Label1.TabIndex = 2
+        Me.Label1.Text = "Supprimer un favoris"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.BackColor = System.Drawing.Color.White
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox1.Location = New System.Drawing.Point(18, 47)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.Size = New System.Drawing.Size(199, 158)
+        Me.TextBox1.TabIndex = 1
+        Me.TextBox1.Text = resources.GetString("TextBox1.Text")
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(159, -68)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(529, 462)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'TabPage2
+        '
+        Me.TabPage2.BackColor = System.Drawing.Color.White
+        Me.TabPage2.Controls.Add(Me.Label3)
+        Me.TabPage2.Controls.Add(Me.TextBox3)
+        Me.TabPage2.Location = New System.Drawing.Point(124, 4)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(632, 417)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Afficher l'historique"
         '
         'Label3
         '
@@ -217,6 +207,56 @@ Partial Class Form5
         Me.TextBox3.TabIndex = 3
         Me.TextBox3.Text = resources.GetString("TextBox3.Text")
         '
+        'MetroControlBox1
+        '
+        Me.MetroControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.MetroControlBox1.BoxClose = True
+        Me.MetroControlBox1.BoxMaximize = True
+        Me.MetroControlBox1.BoxMinimize = True
+        Me.MetroControlBox1.FormHeight = Nothing
+        Me.MetroControlBox1.FormWidth = Nothing
+        Me.MetroControlBox1.Location = New System.Drawing.Point(671, 0)
+        Me.MetroControlBox1.Name = "MetroControlBox1"
+        Me.MetroControlBox1.Size = New System.Drawing.Size(88, 26)
+        Me.MetroControlBox1.TabIndex = 1
+        Me.MetroControlBox1.Text = "MetroControlBox1"
+        Me.MetroControlBox1.UseMetroForm = True
+        '
+        'TabPage4
+        '
+        Me.TabPage4.BackColor = System.Drawing.Color.White
+        Me.TabPage4.Controls.Add(Me.Label4)
+        Me.TabPage4.Controls.Add(Me.TextBox4)
+        Me.TabPage4.Location = New System.Drawing.Point(124, 4)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(632, 417)
+        Me.TabPage4.TabIndex = 3
+        Me.TabPage4.Text = "Image de fond"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 11.0!)
+        Me.Label4.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.Label4.Location = New System.Drawing.Point(10, 5)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(220, 20)
+        Me.Label4.TabIndex = 6
+        Me.Label4.Text = "Qu'est-ce que l'image de fond ?"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.BackColor = System.Drawing.Color.White
+        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBox4.Location = New System.Drawing.Point(14, 47)
+        Me.TextBox4.Multiline = True
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.ReadOnly = True
+        Me.TextBox4.Size = New System.Drawing.Size(608, 364)
+        Me.TextBox4.TabIndex = 5
+        Me.TextBox4.Text = resources.GetString("TextBox4.Text")
+        '
         'Form5
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -229,14 +269,16 @@ Partial Class Form5
         Me.MinimumSize = New System.Drawing.Size(776, 441)
         Me.Name = "Form5"
         Me.MetroTabControl1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage1.ResumeLayout(False)
+        Me.TabPage1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage2.ResumeLayout(False)
+        Me.TabPage2.PerformLayout()
+        Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -253,4 +295,7 @@ Partial Class Form5
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
 End Class
