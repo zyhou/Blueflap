@@ -35,10 +35,10 @@ Partial Class Form5
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.MetroControlBox1 = New MetroControls.MetroControlBox()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.MetroControlBox1 = New MetroControls.MetroControlBox()
         Me.MetroTabControl1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -207,21 +207,6 @@ Partial Class Form5
         Me.TextBox3.TabIndex = 3
         Me.TextBox3.Text = resources.GetString("TextBox3.Text")
         '
-        'MetroControlBox1
-        '
-        Me.MetroControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MetroControlBox1.BoxClose = True
-        Me.MetroControlBox1.BoxMaximize = True
-        Me.MetroControlBox1.BoxMinimize = True
-        Me.MetroControlBox1.FormHeight = Nothing
-        Me.MetroControlBox1.FormWidth = Nothing
-        Me.MetroControlBox1.Location = New System.Drawing.Point(671, 0)
-        Me.MetroControlBox1.Name = "MetroControlBox1"
-        Me.MetroControlBox1.Size = New System.Drawing.Size(88, 26)
-        Me.MetroControlBox1.TabIndex = 1
-        Me.MetroControlBox1.Text = "MetroControlBox1"
-        Me.MetroControlBox1.UseMetroForm = True
-        '
         'TabPage4
         '
         Me.TabPage4.BackColor = System.Drawing.Color.White
@@ -256,6 +241,21 @@ Partial Class Form5
         Me.TextBox4.Size = New System.Drawing.Size(608, 364)
         Me.TextBox4.TabIndex = 5
         Me.TextBox4.Text = resources.GetString("TextBox4.Text")
+        '
+        'MetroControlBox1
+        '
+        Me.MetroControlBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.MetroControlBox1.BoxClose = True
+        Me.MetroControlBox1.BoxMaximize = True
+        Me.MetroControlBox1.BoxMinimize = True
+        Me.MetroControlBox1.FormHeight = Nothing
+        Me.MetroControlBox1.FormWidth = Nothing
+        Me.MetroControlBox1.Location = New System.Drawing.Point(671, 0)
+        Me.MetroControlBox1.Name = "MetroControlBox1"
+        Me.MetroControlBox1.Size = New System.Drawing.Size(88, 26)
+        Me.MetroControlBox1.TabIndex = 1
+        Me.MetroControlBox1.Text = "MetroControlBox1"
+        Me.MetroControlBox1.UseMetroForm = True
         '
         'Form5
         '

@@ -397,10 +397,6 @@
     Private Sub TextBox5_Leave(sender As Object, e As EventArgs) Handles SrchF_Searchbox.Leave
         Me.AcceptButton = GoButton
     End Sub
-    Private Sub Recherche_Leave(sender As Object, e As EventArgs)
-        Me.AcceptButton = GoButton
-    End Sub
-
     Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs) Handles Verr_Textbox.TextChanged
         Me.AcceptButton = Verr_AcceptButt
         Verr_WrongMp.Visible = False
@@ -410,6 +406,7 @@
     End Sub
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Infos_CodeShowHide.Click
+        Infos_Share.Visible = False
         If Infos_code_source.Visible = False Then
             Infos_code_source.Visible = True
         Else
@@ -422,6 +419,9 @@
         Infos_Loading.Visible = False
         Infos_Save.Visible = True
         Infos_Print.Visible = True
+        If stng_nevpriv.Checked = True Then
+            Web.WebSession.ClearCookies()
+        End If
     End Sub
     Private Sub Infoload_Navigating(sender As Object, e As WebBrowserNavigatingEventArgs) Handles Infos_Trident_Browser_Recup_Infos.Navigating
         Infos_Loader.Visible = True
@@ -514,13 +514,15 @@
         Menu_Refresh.Visible = True
         Infos_Titre.Text = Web.Title
 
-        If Fav_Historique_List.Items.Contains(SmartAdressbox.Text) Then
-        Else
-            My.Settings.Historique.Add(SmartAdressbox.Text)
-            Fav_Historique_List.Items.Clear()
-            For Each Item As String In My.Settings.Historique
-                Fav_Historique_List.Items.Add(Item)
-            Next
+        If Not stng_nevpriv.Checked = True Then
+            If Fav_Historique_List.Items.Contains(SmartAdressbox.Text) Then
+            Else
+                My.Settings.Historique.Add(SmartAdressbox.Text)
+                Fav_Historique_List.Items.Clear()
+                For Each Item As String In My.Settings.Historique
+                    Fav_Historique_List.Items.Add(Item)
+                Next
+            End If
         End If
 
         If SmartAdressbox.Text.Contains("https://") Then
@@ -875,8 +877,24 @@
         open.Filter = "Image Files(*.png; *.jpg; *.bmp)|*.png; *.jpg; *.bmp"
         If open.ShowDialog() = DialogResult.OK Then
             Dim fileName As String = System.IO.Path.GetFullPath(open.FileName)
-            ABlueflap_Bluestart.BackgroundImage = New Bitmap(open.FileName)
             ABlueflap_Bluestart.Tag = fileName
+            ABlueflap_Bluestart.BackgroundImage = New Bitmap(open.FileName)
         End If
+    End Sub
+
+    Private Sub FacebookToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FacebookToolStripMenuItem.Click
+        ABlueflap_Infos.BringToFront()
+        Infos_code_source.Visible = False
+        Infos_Share.Visible = True
+        Infos_Share.Source = New Uri("https://www.facebook.com/sharer/sharer.php?u=" + SmartAdressbox.Text)
+        Infos_Trident_Browser_Recup_Infos.Navigate(Web.Source)
+    End Sub
+
+    Private Sub TwitterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TwitterToolStripMenuItem.Click
+        ABlueflap_Infos.BringToFront()
+        Infos_code_source.Visible = False
+        Infos_Share.Visible = True
+        Infos_Share.Source = New Uri("https://twitter.com/home?status=@BlueflapBrowser%20cette%20page%20est%20fantastique%20!%20" + SmartAdressbox.Text)
+        Infos_Trident_Browser_Recup_Infos.Navigate(Web.Source)
     End Sub
 End Class

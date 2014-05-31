@@ -50,7 +50,7 @@ Partial Class Fenetre_Principale
         Me.SmartAdressbox = New System.Windows.Forms.TextBox()
         Me.Menu_ShowHide_Button = New System.Windows.Forms.Button()
         Me.voletlateral = New System.Windows.Forms.MenuStrip()
-        Me.Menu = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.Menua = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Menu_Home = New System.Windows.Forms.ToolStripMenuItem()
         Me.Menu_Back = New System.Windows.Forms.ToolStripMenuItem()
@@ -60,6 +60,9 @@ Partial Class Fenetre_Principale
         Me.Menu_Fight = New System.Windows.Forms.ToolStripMenuItem()
         Me.Menu_Favos = New System.Windows.Forms.ToolStripMenuItem()
         Me.Menu_Share = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FacebookToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TwitterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Menu_Settings = New System.Windows.Forms.ToolStripMenuItem()
         Me.Menu_Lock = New System.Windows.Forms.ToolStripMenuItem()
         Me.Menu_FullScr = New System.Windows.Forms.ToolStripMenuItem()
@@ -67,6 +70,27 @@ Partial Class Fenetre_Principale
         Me.ABlueflap_Settings = New System.Windows.Forms.Panel()
         Me.MetroHeaderButton1 = New MetroControls.MetroHeaderButton()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Sett_TabB = New System.Windows.Forms.Panel()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.stng_nevpriv = New System.Windows.Forms.CheckBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Stng_OptionsInternet = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Stng_SupprHisto = New System.Windows.Forms.Button()
+        Me.Stng_SupprCacheCookies = New System.Windows.Forms.Button()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Sett_TabC = New System.Windows.Forms.Panel()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.stng_github = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.stng_simpleworld = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Stng_VersionSystem = New System.Windows.Forms.Label()
+        Me.Stng_ShowLicense = New System.Windows.Forms.Button()
         Me.Sett_TabA = New System.Windows.Forms.Panel()
         Me.memo_checkbox = New System.Windows.Forms.CheckBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -106,25 +130,6 @@ Partial Class Fenetre_Principale
         Me.ShapeContainer3 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.RectangleShape2 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
         Me.RectangleShape1 = New Microsoft.VisualBasic.PowerPacks.RectangleShape()
-        Me.Sett_TabB = New System.Windows.Forms.Panel()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Stng_OptionsInternet = New System.Windows.Forms.Button()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Stng_SupprHisto = New System.Windows.Forms.Button()
-        Me.Stng_SupprCacheCookies = New System.Windows.Forms.Button()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Sett_TabC = New System.Windows.Forms.Panel()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.stng_github = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.stng_simpleworld = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Stng_VersionSystem = New System.Windows.Forms.Label()
-        Me.Stng_ShowLicense = New System.Windows.Forms.Button()
         Me.sett_tab3 = New MetroControls.MetroHeaderButton()
         Me.sett_tab2 = New MetroControls.MetroHeaderButton()
         Me.sett_tab1 = New MetroControls.MetroHeaderButton()
@@ -162,15 +167,16 @@ Partial Class Fenetre_Principale
         Me.Infos_back = New System.Windows.Forms.Button()
         Me.Infos_Adresse = New System.Windows.Forms.Label()
         Me.Infos_Titre = New System.Windows.Forms.Label()
+        Me.Infos_Share = New Awesomium.Windows.Forms.WebControl(Me.components)
         Me.WebSessionProvider1 = New Awesomium.Windows.Forms.WebSessionProvider(Me.components)
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.ABlueflap_Bluestart = New System.Windows.Forms.Panel()
+        Me.BS_Fav = New System.Windows.Forms.Button()
         Me.BS_Searchfight = New System.Windows.Forms.Button()
         Me.BS_Browser = New System.Windows.Forms.Button()
         Me.Bs_Favbulle = New System.Windows.Forms.Panel()
         Me.BS_Favlist = New System.Windows.Forms.ListBox()
-        Me.BS_Fav = New System.Windows.Forms.Button()
         Me.BS_Date = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Panel()
         Me.BS_Searchbutton = New System.Windows.Forms.Button()
@@ -190,9 +196,11 @@ Partial Class Fenetre_Principale
         Me.Notif_add.SuspendLayout()
         CType(Me.Loader, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.voletlateral.SuspendLayout()
-        Me.Menu.SuspendLayout()
+        Me.Menua.SuspendLayout()
         Me.ABlueflap_Settings.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        Me.Sett_TabB.SuspendLayout()
+        Me.Sett_TabC.SuspendLayout()
         Me.Sett_TabA.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -201,8 +209,6 @@ Partial Class Fenetre_Principale
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Sett_TabB.SuspendLayout()
-        Me.Sett_TabC.SuspendLayout()
         Me.ABlueflap_Fight.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -487,6 +493,7 @@ Partial Class Fenetre_Principale
         Me.AddFavo_Button.BackgroundImage = CType(resources.GetObject("AddFavo_Button.BackgroundImage"), System.Drawing.Image)
         Me.AddFavo_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.AddFavo_Button.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark
+        Me.AddFavo_Button.FlatAppearance.BorderSize = 0
         Me.AddFavo_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AddFavo_Button.ForeColor = System.Drawing.SystemColors.Control
         Me.AddFavo_Button.Location = New System.Drawing.Point(34, 4)
@@ -544,9 +551,9 @@ Partial Class Fenetre_Principale
         Me.voletlateral.AutoSize = False
         Me.voletlateral.BackColor = System.Drawing.Color.White
         Me.voletlateral.BackgroundImage = CType(resources.GetObject("voletlateral.BackgroundImage"), System.Drawing.Image)
-        Me.voletlateral.ContextMenuStrip = Me.Menu
+        Me.voletlateral.ContextMenuStrip = Me.Menua
         Me.voletlateral.Dock = System.Windows.Forms.DockStyle.Left
-        Me.voletlateral.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Menu_Home, Me.Menu_Back, Me.Menu_Forward, Me.Menu_Stop, Me.Menu_Refresh, Me.Menu_Fight, Me.Menu_Favos, Me.Menu_Share, Me.Menu_Settings, Me.Menu_Lock, Me.Menu_FullScr, Me.Menu_Memo})
+        Me.voletlateral.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Menu_Home, Me.Menu_Back, Me.Menu_Forward, Me.Menu_Stop, Me.Menu_Refresh, Me.Menu_Fight, Me.Menu_Favos, Me.Menu_Share, Me.ToolStripMenuItem1, Me.Menu_Settings, Me.Menu_Lock, Me.Menu_FullScr, Me.Menu_Memo})
         Me.voletlateral.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table
         Me.voletlateral.Location = New System.Drawing.Point(0, 0)
         Me.voletlateral.Name = "voletlateral"
@@ -555,13 +562,13 @@ Partial Class Fenetre_Principale
         Me.voletlateral.TabIndex = 1
         Me.voletlateral.Text = "MenuStrip1"
         '
-        'Menu
+        'Menua
         '
-        Me.Menu.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Menu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2})
-        Me.Menu.Name = "Menu"
-        Me.Menu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
-        Me.Menu.Size = New System.Drawing.Size(160, 28)
+        Me.Menua.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Menua.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem2})
+        Me.Menua.Name = "Menu"
+        Me.Menua.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.Menua.Size = New System.Drawing.Size(160, 28)
         '
         'ToolStripMenuItem2
         '
@@ -670,6 +677,35 @@ Partial Class Fenetre_Principale
         Me.Menu_Share.Size = New System.Drawing.Size(112, 24)
         Me.Menu_Share.Text = "Informations"
         '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FacebookToolStripMenuItem, Me.TwitterToolStripMenuItem})
+        Me.ToolStripMenuItem1.Font = New System.Drawing.Font("Segoe UI Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripMenuItem1.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.ToolStripMenuItem1.Image = CType(resources.GetObject("ToolStripMenuItem1.Image"), System.Drawing.Image)
+        Me.ToolStripMenuItem1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.ToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(88, 24)
+        Me.ToolStripMenuItem1.Text = "Partager"
+        '
+        'FacebookToolStripMenuItem
+        '
+        Me.FacebookToolStripMenuItem.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.FacebookToolStripMenuItem.Image = CType(resources.GetObject("FacebookToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.FacebookToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.FacebookToolStripMenuItem.Name = "FacebookToolStripMenuItem"
+        Me.FacebookToolStripMenuItem.Size = New System.Drawing.Size(137, 24)
+        Me.FacebookToolStripMenuItem.Text = "Facebook"
+        '
+        'TwitterToolStripMenuItem
+        '
+        Me.TwitterToolStripMenuItem.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.TwitterToolStripMenuItem.Image = CType(resources.GetObject("TwitterToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.TwitterToolStripMenuItem.Name = "TwitterToolStripMenuItem"
+        Me.TwitterToolStripMenuItem.Size = New System.Drawing.Size(137, 24)
+        Me.TwitterToolStripMenuItem.Text = "Twitter"
+        '
         'Menu_Settings
         '
         Me.Menu_Settings.Font = New System.Drawing.Font("Segoe UI Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -752,13 +788,259 @@ Partial Class Fenetre_Principale
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel3.AutoScroll = True
-        Me.Panel3.Controls.Add(Me.Sett_TabA)
         Me.Panel3.Controls.Add(Me.Sett_TabB)
         Me.Panel3.Controls.Add(Me.Sett_TabC)
+        Me.Panel3.Controls.Add(Me.Sett_TabA)
         Me.Panel3.Location = New System.Drawing.Point(0, 116)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(1117, 491)
         Me.Panel3.TabIndex = 60
+        '
+        'Sett_TabB
+        '
+        Me.Sett_TabB.Controls.Add(Me.Label19)
+        Me.Sett_TabB.Controls.Add(Me.stng_nevpriv)
+        Me.Sett_TabB.Controls.Add(Me.Label11)
+        Me.Sett_TabB.Controls.Add(Me.Button1)
+        Me.Sett_TabB.Controls.Add(Me.Stng_OptionsInternet)
+        Me.Sett_TabB.Controls.Add(Me.Label9)
+        Me.Sett_TabB.Controls.Add(Me.Label17)
+        Me.Sett_TabB.Controls.Add(Me.Stng_SupprHisto)
+        Me.Sett_TabB.Controls.Add(Me.Stng_SupprCacheCookies)
+        Me.Sett_TabB.Controls.Add(Me.Label13)
+        Me.Sett_TabB.Controls.Add(Me.Label12)
+        Me.Sett_TabB.Location = New System.Drawing.Point(87, 15)
+        Me.Sett_TabB.Name = "Sett_TabB"
+        Me.Sett_TabB.Size = New System.Drawing.Size(925, 349)
+        Me.Sett_TabB.TabIndex = 58
+        Me.Sett_TabB.Visible = False
+        '
+        'Label19
+        '
+        Me.Label19.AutoSize = True
+        Me.Label19.Font = New System.Drawing.Font("Segoe UI Semilight", 11.0!)
+        Me.Label19.Location = New System.Drawing.Point(13, 68)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(56, 20)
+        Me.Label19.TabIndex = 50
+        Me.Label19.Text = "Réseau"
+        '
+        'stng_nevpriv
+        '
+        Me.stng_nevpriv.AutoSize = True
+        Me.stng_nevpriv.Checked = Global.Blueflap.My.MySettings.Default.navprivee
+        Me.stng_nevpriv.DataBindings.Add(New System.Windows.Forms.Binding("Checked", Global.Blueflap.My.MySettings.Default, "navprivee", True, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged))
+        Me.stng_nevpriv.Font = New System.Drawing.Font("Segoe UI Semilight", 9.75!)
+        Me.stng_nevpriv.Location = New System.Drawing.Point(163, 19)
+        Me.stng_nevpriv.Name = "stng_nevpriv"
+        Me.stng_nevpriv.Size = New System.Drawing.Size(68, 21)
+        Me.stng_nevpriv.TabIndex = 49
+        Me.stng_nevpriv.Text = "Activée"
+        Me.stng_nevpriv.UseVisualStyleBackColor = True
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI Semilight", 11.0!)
+        Me.Label11.Location = New System.Drawing.Point(13, 18)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(124, 20)
+        Me.Label11.TabIndex = 34
+        Me.Label11.Text = "Navigation privée"
+        '
+        'Button1
+        '
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.Button1.Location = New System.Drawing.Point(163, 223)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(94, 25)
+        Me.Button1.TabIndex = 48
+        Me.Button1.Text = "Signaler un bug"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Stng_OptionsInternet
+        '
+        Me.Stng_OptionsInternet.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Stng_OptionsInternet.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Stng_OptionsInternet.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.Stng_OptionsInternet.Location = New System.Drawing.Point(162, 61)
+        Me.Stng_OptionsInternet.Name = "Stng_OptionsInternet"
+        Me.Stng_OptionsInternet.Size = New System.Drawing.Size(154, 35)
+        Me.Stng_OptionsInternet.TabIndex = 33
+        Me.Stng_OptionsInternet.Text = "Options Internet"
+        Me.Stng_OptionsInternet.UseVisualStyleBackColor = True
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semilight", 11.0!)
+        Me.Label9.Location = New System.Drawing.Point(13, 130)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(66, 20)
+        Me.Label9.TabIndex = 40
+        Me.Label9.Text = "Données"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Segoe UI Semilight", 11.0!)
+        Me.Label17.Location = New System.Drawing.Point(13, 223)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(48, 20)
+        Me.Label17.TabIndex = 46
+        Me.Label17.Text = "Extras"
+        '
+        'Stng_SupprHisto
+        '
+        Me.Stng_SupprHisto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Stng_SupprHisto.Font = New System.Drawing.Font("Segoe UI Light", 9.75!)
+        Me.Stng_SupprHisto.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.Stng_SupprHisto.Location = New System.Drawing.Point(163, 121)
+        Me.Stng_SupprHisto.Name = "Stng_SupprHisto"
+        Me.Stng_SupprHisto.Size = New System.Drawing.Size(154, 35)
+        Me.Stng_SupprHisto.TabIndex = 39
+        Me.Stng_SupprHisto.Text = "Effacer l'historique"
+        Me.Stng_SupprHisto.UseVisualStyleBackColor = True
+        '
+        'Stng_SupprCacheCookies
+        '
+        Me.Stng_SupprCacheCookies.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Stng_SupprCacheCookies.Font = New System.Drawing.Font("Segoe UI Light", 9.75!)
+        Me.Stng_SupprCacheCookies.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.Stng_SupprCacheCookies.Location = New System.Drawing.Point(163, 167)
+        Me.Stng_SupprCacheCookies.Name = "Stng_SupprCacheCookies"
+        Me.Stng_SupprCacheCookies.Size = New System.Drawing.Size(212, 35)
+        Me.Stng_SupprCacheCookies.TabIndex = 42
+        Me.Stng_SupprCacheCookies.Text = "Effacer les cookies et le cache"
+        Me.Stng_SupprCacheCookies.UseVisualStyleBackColor = True
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label13.Location = New System.Drawing.Point(381, 184)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(183, 15)
+        Me.Label13.TabIndex = 36
+        Me.Label13.Text = "Cliquer sur l'onglet ""connexions"""
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.ForeColor = System.Drawing.Color.Black
+        Me.Label12.Location = New System.Drawing.Point(381, 171)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(371, 13)
+        Me.Label12.TabIndex = 35
+        Me.Label12.Text = "Blueflap utilise les paramètres proxy du système pour se connecter au réseau."
+        '
+        'Sett_TabC
+        '
+        Me.Sett_TabC.Controls.Add(Me.Label16)
+        Me.Sett_TabC.Controls.Add(Me.Label15)
+        Me.Sett_TabC.Controls.Add(Me.stng_github)
+        Me.Sett_TabC.Controls.Add(Me.Label2)
+        Me.Sett_TabC.Controls.Add(Me.stng_simpleworld)
+        Me.Sett_TabC.Controls.Add(Me.Label10)
+        Me.Sett_TabC.Controls.Add(Me.Stng_VersionSystem)
+        Me.Sett_TabC.Controls.Add(Me.Stng_ShowLicense)
+        Me.Sett_TabC.Location = New System.Drawing.Point(87, 15)
+        Me.Sett_TabC.Name = "Sett_TabC"
+        Me.Sett_TabC.Size = New System.Drawing.Size(629, 257)
+        Me.Sett_TabC.TabIndex = 59
+        Me.Sett_TabC.Visible = False
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Segoe UI Semilight", 11.0!)
+        Me.Label16.Location = New System.Drawing.Point(14, 173)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(90, 20)
+        Me.Label16.TabIndex = 54
+        Me.Label16.Text = "OpenSource"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Segoe UI Semilight", 11.0!)
+        Me.Label15.Location = New System.Drawing.Point(14, 18)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(56, 20)
+        Me.Label15.TabIndex = 53
+        Me.Label15.Text = "Version"
+        '
+        'stng_github
+        '
+        Me.stng_github.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.stng_github.Font = New System.Drawing.Font("Segoe UI Light", 9.75!)
+        Me.stng_github.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.stng_github.Location = New System.Drawing.Point(164, 114)
+        Me.stng_github.Name = "stng_github"
+        Me.stng_github.Size = New System.Drawing.Size(154, 35)
+        Me.stng_github.TabIndex = 52
+        Me.stng_github.Text = "GitHub"
+        Me.stng_github.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semilight", 11.0!)
+        Me.Label2.Location = New System.Drawing.Point(14, 68)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(40, 20)
+        Me.Label2.TabIndex = 49
+        Me.Label2.Text = "Devs"
+        '
+        'stng_simpleworld
+        '
+        Me.stng_simpleworld.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.stng_simpleworld.Font = New System.Drawing.Font("Segoe UI Light", 9.75!)
+        Me.stng_simpleworld.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.stng_simpleworld.Location = New System.Drawing.Point(163, 61)
+        Me.stng_simpleworld.Name = "stng_simpleworld"
+        Me.stng_simpleworld.Size = New System.Drawing.Size(154, 35)
+        Me.stng_simpleworld.TabIndex = 50
+        Me.stng_simpleworld.Text = "Simpleworld"
+        Me.stng_simpleworld.UseVisualStyleBackColor = True
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semilight", 11.0!)
+        Me.Label10.Location = New System.Drawing.Point(14, 121)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(78, 20)
+        Me.Label10.TabIndex = 51
+        Me.Label10.Text = "Contribuer"
+        '
+        'Stng_VersionSystem
+        '
+        Me.Stng_VersionSystem.AutoSize = True
+        Me.Stng_VersionSystem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Stng_VersionSystem.Location = New System.Drawing.Point(160, 20)
+        Me.Stng_VersionSystem.Name = "Stng_VersionSystem"
+        Me.Stng_VersionSystem.Size = New System.Drawing.Size(97, 13)
+        Me.Stng_VersionSystem.TabIndex = 19
+        Me.Stng_VersionSystem.Text = "Blueflap 3.0 Beta 6"
+        '
+        'Stng_ShowLicense
+        '
+        Me.Stng_ShowLicense.FlatAppearance.BorderSize = 0
+        Me.Stng_ShowLicense.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Stng_ShowLicense.Font = New System.Drawing.Font("Segoe UI Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Stng_ShowLicense.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.Stng_ShowLicense.Location = New System.Drawing.Point(164, 169)
+        Me.Stng_ShowLicense.Name = "Stng_ShowLicense"
+        Me.Stng_ShowLicense.Size = New System.Drawing.Size(153, 28)
+        Me.Stng_ShowLicense.TabIndex = 47
+        Me.Stng_ShowLicense.Text = "Licence OpenSource"
+        Me.Stng_ShowLicense.UseVisualStyleBackColor = True
         '
         'Sett_TabA
         '
@@ -1223,227 +1505,6 @@ Partial Class Fenetre_Principale
         Me.RectangleShape1.Name = "RectangleShape1"
         Me.RectangleShape1.Size = New System.Drawing.Size(583, 36)
         '
-        'Sett_TabB
-        '
-        Me.Sett_TabB.Controls.Add(Me.Label11)
-        Me.Sett_TabB.Controls.Add(Me.Button1)
-        Me.Sett_TabB.Controls.Add(Me.Stng_OptionsInternet)
-        Me.Sett_TabB.Controls.Add(Me.Label9)
-        Me.Sett_TabB.Controls.Add(Me.Label17)
-        Me.Sett_TabB.Controls.Add(Me.Stng_SupprHisto)
-        Me.Sett_TabB.Controls.Add(Me.Stng_SupprCacheCookies)
-        Me.Sett_TabB.Controls.Add(Me.Label13)
-        Me.Sett_TabB.Controls.Add(Me.Label12)
-        Me.Sett_TabB.Location = New System.Drawing.Point(87, 15)
-        Me.Sett_TabB.Name = "Sett_TabB"
-        Me.Sett_TabB.Size = New System.Drawing.Size(925, 268)
-        Me.Sett_TabB.TabIndex = 58
-        Me.Sett_TabB.Visible = False
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI Semilight", 11.0!)
-        Me.Label11.Location = New System.Drawing.Point(13, 18)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(56, 20)
-        Me.Label11.TabIndex = 34
-        Me.Label11.Text = "Réseau"
-        '
-        'Button1
-        '
-        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Cyan
-        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI Light", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Button1.Location = New System.Drawing.Point(164, 173)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(94, 25)
-        Me.Button1.TabIndex = 48
-        Me.Button1.Text = "Signaler un bug"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Stng_OptionsInternet
-        '
-        Me.Stng_OptionsInternet.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Stng_OptionsInternet.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Stng_OptionsInternet.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Stng_OptionsInternet.Location = New System.Drawing.Point(163, 11)
-        Me.Stng_OptionsInternet.Name = "Stng_OptionsInternet"
-        Me.Stng_OptionsInternet.Size = New System.Drawing.Size(154, 35)
-        Me.Stng_OptionsInternet.TabIndex = 33
-        Me.Stng_OptionsInternet.Text = "Options Internet"
-        Me.Stng_OptionsInternet.UseVisualStyleBackColor = True
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI Semilight", 11.0!)
-        Me.Label9.Location = New System.Drawing.Point(14, 80)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(66, 20)
-        Me.Label9.TabIndex = 40
-        Me.Label9.Text = "Données"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Segoe UI Semilight", 11.0!)
-        Me.Label17.Location = New System.Drawing.Point(14, 173)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(48, 20)
-        Me.Label17.TabIndex = 46
-        Me.Label17.Text = "Extras"
-        '
-        'Stng_SupprHisto
-        '
-        Me.Stng_SupprHisto.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Stng_SupprHisto.Font = New System.Drawing.Font("Segoe UI Light", 9.75!)
-        Me.Stng_SupprHisto.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Stng_SupprHisto.Location = New System.Drawing.Point(164, 71)
-        Me.Stng_SupprHisto.Name = "Stng_SupprHisto"
-        Me.Stng_SupprHisto.Size = New System.Drawing.Size(154, 35)
-        Me.Stng_SupprHisto.TabIndex = 39
-        Me.Stng_SupprHisto.Text = "Effacer l'historique"
-        Me.Stng_SupprHisto.UseVisualStyleBackColor = True
-        '
-        'Stng_SupprCacheCookies
-        '
-        Me.Stng_SupprCacheCookies.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Stng_SupprCacheCookies.Font = New System.Drawing.Font("Segoe UI Light", 9.75!)
-        Me.Stng_SupprCacheCookies.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Stng_SupprCacheCookies.Location = New System.Drawing.Point(164, 117)
-        Me.Stng_SupprCacheCookies.Name = "Stng_SupprCacheCookies"
-        Me.Stng_SupprCacheCookies.Size = New System.Drawing.Size(212, 35)
-        Me.Stng_SupprCacheCookies.TabIndex = 42
-        Me.Stng_SupprCacheCookies.Text = "Effacer les cookies et le cache"
-        Me.Stng_SupprCacheCookies.UseVisualStyleBackColor = True
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label13.Location = New System.Drawing.Point(382, 134)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(183, 15)
-        Me.Label13.TabIndex = 36
-        Me.Label13.Text = "Cliquer sur l'onglet ""connexions"""
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.ForeColor = System.Drawing.Color.Black
-        Me.Label12.Location = New System.Drawing.Point(382, 121)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(371, 13)
-        Me.Label12.TabIndex = 35
-        Me.Label12.Text = "Blueflap utilise les paramètres proxy du système pour se connecter au réseau."
-        '
-        'Sett_TabC
-        '
-        Me.Sett_TabC.Controls.Add(Me.Label16)
-        Me.Sett_TabC.Controls.Add(Me.Label15)
-        Me.Sett_TabC.Controls.Add(Me.stng_github)
-        Me.Sett_TabC.Controls.Add(Me.Label2)
-        Me.Sett_TabC.Controls.Add(Me.stng_simpleworld)
-        Me.Sett_TabC.Controls.Add(Me.Label10)
-        Me.Sett_TabC.Controls.Add(Me.Stng_VersionSystem)
-        Me.Sett_TabC.Controls.Add(Me.Stng_ShowLicense)
-        Me.Sett_TabC.Location = New System.Drawing.Point(87, 15)
-        Me.Sett_TabC.Name = "Sett_TabC"
-        Me.Sett_TabC.Size = New System.Drawing.Size(629, 257)
-        Me.Sett_TabC.TabIndex = 59
-        Me.Sett_TabC.Visible = False
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Segoe UI Semilight", 11.0!)
-        Me.Label16.Location = New System.Drawing.Point(14, 173)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(90, 20)
-        Me.Label16.TabIndex = 54
-        Me.Label16.Text = "OpenSource"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Segoe UI Semilight", 11.0!)
-        Me.Label15.Location = New System.Drawing.Point(14, 18)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(56, 20)
-        Me.Label15.TabIndex = 53
-        Me.Label15.Text = "Version"
-        '
-        'stng_github
-        '
-        Me.stng_github.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.stng_github.Font = New System.Drawing.Font("Segoe UI Light", 9.75!)
-        Me.stng_github.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.stng_github.Location = New System.Drawing.Point(164, 114)
-        Me.stng_github.Name = "stng_github"
-        Me.stng_github.Size = New System.Drawing.Size(154, 35)
-        Me.stng_github.TabIndex = 52
-        Me.stng_github.Text = "GitHub"
-        Me.stng_github.UseVisualStyleBackColor = True
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI Semilight", 11.0!)
-        Me.Label2.Location = New System.Drawing.Point(14, 68)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(40, 20)
-        Me.Label2.TabIndex = 49
-        Me.Label2.Text = "Devs"
-        '
-        'stng_simpleworld
-        '
-        Me.stng_simpleworld.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.stng_simpleworld.Font = New System.Drawing.Font("Segoe UI Light", 9.75!)
-        Me.stng_simpleworld.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.stng_simpleworld.Location = New System.Drawing.Point(163, 61)
-        Me.stng_simpleworld.Name = "stng_simpleworld"
-        Me.stng_simpleworld.Size = New System.Drawing.Size(154, 35)
-        Me.stng_simpleworld.TabIndex = 50
-        Me.stng_simpleworld.Text = "Simpleworld"
-        Me.stng_simpleworld.UseVisualStyleBackColor = True
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI Semilight", 11.0!)
-        Me.Label10.Location = New System.Drawing.Point(14, 121)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(78, 20)
-        Me.Label10.TabIndex = 51
-        Me.Label10.Text = "Contribuer"
-        '
-        'Stng_VersionSystem
-        '
-        Me.Stng_VersionSystem.AutoSize = True
-        Me.Stng_VersionSystem.ForeColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.Stng_VersionSystem.Location = New System.Drawing.Point(160, 20)
-        Me.Stng_VersionSystem.Name = "Stng_VersionSystem"
-        Me.Stng_VersionSystem.Size = New System.Drawing.Size(97, 13)
-        Me.Stng_VersionSystem.TabIndex = 19
-        Me.Stng_VersionSystem.Text = "Blueflap 3.0 Beta 6"
-        '
-        'Stng_ShowLicense
-        '
-        Me.Stng_ShowLicense.FlatAppearance.BorderSize = 0
-        Me.Stng_ShowLicense.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Stng_ShowLicense.Font = New System.Drawing.Font("Segoe UI Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Stng_ShowLicense.ForeColor = System.Drawing.Color.DeepSkyBlue
-        Me.Stng_ShowLicense.Location = New System.Drawing.Point(164, 169)
-        Me.Stng_ShowLicense.Name = "Stng_ShowLicense"
-        Me.Stng_ShowLicense.Size = New System.Drawing.Size(153, 28)
-        Me.Stng_ShowLicense.TabIndex = 47
-        Me.Stng_ShowLicense.Text = "Licence OpenSource"
-        Me.Stng_ShowLicense.UseVisualStyleBackColor = True
-        '
         'sett_tab3
         '
         Me.sett_tab3.Checked = True
@@ -1770,6 +1831,7 @@ Partial Class Fenetre_Principale
         Me.ABlueflap_Infos.Controls.Add(Me.Infos_back)
         Me.ABlueflap_Infos.Controls.Add(Me.Infos_Adresse)
         Me.ABlueflap_Infos.Controls.Add(Me.Infos_Titre)
+        Me.ABlueflap_Infos.Controls.Add(Me.Infos_Share)
         Me.ABlueflap_Infos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ABlueflap_Infos.Location = New System.Drawing.Point(0, 0)
         Me.ABlueflap_Infos.Name = "ABlueflap_Infos"
@@ -1914,10 +1976,22 @@ Partial Class Fenetre_Principale
         Me.Infos_Titre.TabIndex = 7
         Me.Infos_Titre.Text = "[Titre]"
         '
+        'Infos_Share
+        '
+        Me.Infos_Share.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Infos_Share.BackColor = System.Drawing.Color.White
+        Me.Infos_Share.Location = New System.Drawing.Point(0, 191)
+        Me.Infos_Share.Size = New System.Drawing.Size(1117, 415)
+        Me.Infos_Share.TabIndex = 15
+        Me.Infos_Share.Visible = False
+        '
         'WebSessionProvider1
         '
         Me.WebSessionProvider1.DataPath = "C:\Blueflap\Data"
         Me.WebSessionProvider1.Views.Add(Me.Web)
+        Me.WebSessionProvider1.Views.Add(Me.Infos_Share)
         '
         'SaveFileDialog1
         '
@@ -1931,10 +2005,10 @@ Partial Class Fenetre_Principale
         '
         Me.ABlueflap_Bluestart.BackColor = System.Drawing.SystemColors.Control
         Me.ABlueflap_Bluestart.BackgroundImage = CType(resources.GetObject("ABlueflap_Bluestart.BackgroundImage"), System.Drawing.Image)
+        Me.ABlueflap_Bluestart.Controls.Add(Me.BS_Fav)
         Me.ABlueflap_Bluestart.Controls.Add(Me.BS_Searchfight)
         Me.ABlueflap_Bluestart.Controls.Add(Me.BS_Browser)
         Me.ABlueflap_Bluestart.Controls.Add(Me.Bs_Favbulle)
-        Me.ABlueflap_Bluestart.Controls.Add(Me.BS_Fav)
         Me.ABlueflap_Bluestart.Controls.Add(Me.BS_Date)
         Me.ABlueflap_Bluestart.Controls.Add(Me.Label14)
         Me.ABlueflap_Bluestart.Controls.Add(Me.BS_Settings)
@@ -1948,6 +2022,22 @@ Partial Class Fenetre_Principale
         Me.ABlueflap_Bluestart.TabIndex = 5
         Me.ABlueflap_Bluestart.Tag = Global.Blueflap.My.MySettings.Default.Hey
         Me.ABlueflap_Bluestart.Visible = False
+        '
+        'BS_Fav
+        '
+        Me.BS_Fav.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.BS_Fav.BackColor = System.Drawing.Color.Transparent
+        Me.BS_Fav.BackgroundImage = CType(resources.GetObject("BS_Fav.BackgroundImage"), System.Drawing.Image)
+        Me.BS_Fav.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.BS_Fav.FlatAppearance.BorderSize = 0
+        Me.BS_Fav.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BS_Fav.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BS_Fav.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BS_Fav.Location = New System.Drawing.Point(95, 541)
+        Me.BS_Fav.Name = "BS_Fav"
+        Me.BS_Fav.Size = New System.Drawing.Size(54, 54)
+        Me.BS_Fav.TabIndex = 0
+        Me.BS_Fav.UseVisualStyleBackColor = False
         '
         'BS_Searchfight
         '
@@ -1986,10 +2076,11 @@ Partial Class Fenetre_Principale
         Me.Bs_Favbulle.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Bs_Favbulle.BackColor = System.Drawing.Color.Transparent
         Me.Bs_Favbulle.BackgroundImage = CType(resources.GetObject("Bs_Favbulle.BackgroundImage"), System.Drawing.Image)
+        Me.Bs_Favbulle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.Bs_Favbulle.Controls.Add(Me.BS_Favlist)
-        Me.Bs_Favbulle.Location = New System.Drawing.Point(33, 234)
+        Me.Bs_Favbulle.Location = New System.Drawing.Point(28, 248)
         Me.Bs_Favbulle.Name = "Bs_Favbulle"
-        Me.Bs_Favbulle.Size = New System.Drawing.Size(182, 301)
+        Me.Bs_Favbulle.Size = New System.Drawing.Size(452, 302)
         Me.Bs_Favbulle.TabIndex = 7
         Me.Bs_Favbulle.Visible = False
         '
@@ -2001,28 +2092,11 @@ Partial Class Fenetre_Principale
         Me.BS_Favlist.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.BS_Favlist.Font = New System.Drawing.Font("Segoe UI Semilight", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BS_Favlist.FormattingEnabled = True
-        Me.BS_Favlist.HorizontalScrollbar = True
         Me.BS_Favlist.ItemHeight = 20
-        Me.BS_Favlist.Location = New System.Drawing.Point(0, 21)
+        Me.BS_Favlist.Location = New System.Drawing.Point(8, 3)
         Me.BS_Favlist.Name = "BS_Favlist"
-        Me.BS_Favlist.Size = New System.Drawing.Size(182, 240)
+        Me.BS_Favlist.Size = New System.Drawing.Size(436, 260)
         Me.BS_Favlist.TabIndex = 0
-        '
-        'BS_Fav
-        '
-        Me.BS_Fav.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.BS_Fav.BackColor = System.Drawing.Color.Transparent
-        Me.BS_Fav.BackgroundImage = CType(resources.GetObject("BS_Fav.BackgroundImage"), System.Drawing.Image)
-        Me.BS_Fav.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.BS_Fav.FlatAppearance.BorderSize = 0
-        Me.BS_Fav.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.BS_Fav.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BS_Fav.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BS_Fav.Location = New System.Drawing.Point(95, 541)
-        Me.BS_Fav.Name = "BS_Fav"
-        Me.BS_Fav.Size = New System.Drawing.Size(54, 54)
-        Me.BS_Fav.TabIndex = 0
-        Me.BS_Fav.UseVisualStyleBackColor = False
         '
         'BS_Date
         '
@@ -2154,14 +2228,14 @@ Partial Class Fenetre_Principale
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1117, 607)
-        Me.Controls.Add(Me.ABlueflap_Settings)
         Me.Controls.Add(Me.ABlueflap_Navigateur)
-        Me.Controls.Add(Me.ABlueflap_Bluestart)
         Me.Controls.Add(Me.ABlueflap_Infos)
+        Me.Controls.Add(Me.ABlueflap_Settings)
+        Me.Controls.Add(Me.ABlueflap_Bluestart)
         Me.Controls.Add(Me.ABlueflap_Fight)
         Me.Controls.Add(Me.ABlueflap_Verrouillage)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MinimumSize = New System.Drawing.Size(948, 39)
+        Me.MinimumSize = New System.Drawing.Size(240, 39)
         Me.Name = "Fenetre_Principale"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Blueflap"
@@ -2178,10 +2252,14 @@ Partial Class Fenetre_Principale
         CType(Me.Loader, System.ComponentModel.ISupportInitialize).EndInit()
         Me.voletlateral.ResumeLayout(False)
         Me.voletlateral.PerformLayout()
-        Me.Menu.ResumeLayout(False)
+        Me.Menua.ResumeLayout(False)
         Me.ABlueflap_Settings.ResumeLayout(False)
         Me.ABlueflap_Settings.PerformLayout()
         Me.Panel3.ResumeLayout(False)
+        Me.Sett_TabB.ResumeLayout(False)
+        Me.Sett_TabB.PerformLayout()
+        Me.Sett_TabC.ResumeLayout(False)
+        Me.Sett_TabC.PerformLayout()
         Me.Sett_TabA.ResumeLayout(False)
         Me.Sett_TabA.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2191,10 +2269,6 @@ Partial Class Fenetre_Principale
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Sett_TabB.ResumeLayout(False)
-        Me.Sett_TabB.PerformLayout()
-        Me.Sett_TabC.ResumeLayout(False)
-        Me.Sett_TabC.PerformLayout()
         Me.ABlueflap_Fight.ResumeLayout(False)
         Me.ABlueflap_Fight.PerformLayout()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
@@ -2345,7 +2419,6 @@ Partial Class Fenetre_Principale
     Friend WithEvents BS_Favlist As System.Windows.Forms.ListBox
     Friend WithEvents BS_Fav As System.Windows.Forms.Button
     Friend WithEvents Label17 As System.Windows.Forms.Label
-    Private WithEvents Web As Awesomium.Windows.Forms.WebControl
     Friend WithEvents BS_Browser As System.Windows.Forms.Button
     Friend WithEvents BS_Searchfight As System.Windows.Forms.Button
     Friend WithEvents Stng_ShowLicense As System.Windows.Forms.Button
@@ -2355,7 +2428,7 @@ Partial Class Fenetre_Principale
     Friend WithEvents stng_github As System.Windows.Forms.Button
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Menu_Memo As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Menu As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents Menua As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Sett_TabA As System.Windows.Forms.Panel
     Friend WithEvents ShapeContainer3 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
@@ -2378,5 +2451,12 @@ Partial Class Fenetre_Principale
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents memo_checkbox As System.Windows.Forms.CheckBox
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents stng_nevpriv As System.Windows.Forms.CheckBox
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Private WithEvents Web As Awesomium.Windows.Forms.WebControl
+    Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents FacebookToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents TwitterToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Private WithEvents Infos_Share As Awesomium.Windows.Forms.WebControl
 
 End Class

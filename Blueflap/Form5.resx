@@ -117,11 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TextBox4.Text" xml:space="preserve">
-    <value>L'image de fond est une option de personnalisation qui vous permet d'ajouter un "fond d'écran" à Bluestart et à l'écran de verrouillage.
-
-Pour changer l'image de fond, dans le menu, cliquer sur "paramètres" puis sur "personnalisation". Dans les options qui vous sont proposées, chercher "Modifier l'image" et cliquer dessus.</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="PictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1167,6 +1162,11 @@ Ensuite, dans le volet des favoris, cliquez sur "historique".
 
 
 Remarque : Pour effacer l'historique, rendez vous dans les paramètres &gt; Options avancées, puis cliquez sur "effacer l'historique"</value>
+  </data>
+  <data name="TextBox4.Text" xml:space="preserve">
+    <value>L'image de fond est une option de personnalisation qui vous permet d'ajouter un "fond d'écran" à Bluestart et à l'écran de verrouillage.
+
+Pour changer l'image de fond, dans le menu, cliquer sur "paramètres" puis sur "personnalisation". Dans les options qui vous sont proposées, chercher "Modifier l'image" et cliquer dessus.</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
