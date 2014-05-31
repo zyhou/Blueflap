@@ -215,46 +215,16 @@
             Fav_Historique_List.Items.Add(item)
         Next
 
-        If Home_checkbox.Checked = True Then
-            Menu_Home.Visible = True
-        Else
-            Menu_Home.Visible = False
-        End If
-        If Sfight_Checkbox.Checked = True Then
-            Menu_Fight.Visible = True
-        Else
-            Menu_Fight.Visible = False
-        End If
-        If favo_checkbox.Checked = True Then
-            Menu_Favos.Visible = True
-        Else
-            Menu_Favos.Visible = False
-        End If
-        If infos_checkbox.Checked = True Then
-            Menu_Share.Visible = True
-        Else
-            Menu_Share.Visible = False
-        End If
-        If lock_checkbox.Checked = True Then
-            Menu_Lock.Visible = True
-        Else
-            Menu_Lock.Visible = False
-        End If
-        If fullscreen_checkbox.Checked = True Then
-            Menu_FullScr.Visible = True
-        Else
-            Menu_FullScr.Visible = False
-        End If
-        If memo_checkbox.Checked = True Then
-            Menu_Memo.Visible = True
-        Else
-            Menu_Memo.Visible = False
-        End If
-        If Share_checkbox.Checked = True Then
-            menu_partage.Visible = True
-        Else
-            menu_partage.Visible = False
-        End If
+        Menu_Home.Visible = Home_checkbox.Checked
+        Menu_Fight.Visible = Sfight_Checkbox.Checked
+        Menu_Favos.Visible = favo_checkbox.Checked
+        Menu_Share.Visible = infos_checkbox.Checked
+        menu_partage.Visible = Share_checkbox.Checked
+        Menu_Lock.Visible = lock_checkbox.Checked
+        Menu_FullScr.Visible = fullscreen_checkbox.Checked
+        Menu_Memo.Visible = memo_checkbox.Checked
+
+ 
         Label14.Left = (Me.Width - Label14.Width) / 2
         BS_Date.Text = System.DateTime.Now.ToString("dddd dd MMMM yyyy")
         BS_Date.Left = (Me.Width - BS_Date.Width) / 2
@@ -913,5 +883,17 @@
         Infos_Share.Visible = True
         Infos_Share.Source = New Uri("https://twitter.com/home?status=@BlueflapBrowser%20cette%20page%20est%20fantastique%20!%20" + SmartAdressbox.Text)
         Infos_Trident_Browser_Recup_Infos.Navigate(Web.Source)
+    End Sub
+
+    Private Sub Button3_Click_2(sender As Object, e As EventArgs) Handles Button3.Click
+        Process.Start("https://github.com/zyhou")
+    End Sub
+
+    Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles Button4.Click
+        Process.Start("https://github.com/baptisteguil")
+    End Sub
+
+    Private Sub Button5_Click_1(sender As Object, e As EventArgs) Handles Button5.Click
+        Process.Start("https://github.com/Bat41")
     End Sub
 End Class
