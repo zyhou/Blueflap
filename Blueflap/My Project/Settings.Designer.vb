@@ -416,6 +416,30 @@ Namespace My
                 Me("navprivee") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property h() As Boolean
+            Get
+                Return CType(Me("h"),Boolean)
+            End Get
+            Set
+                Me("h") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
+        Public Property Cheminback() As String
+            Get
+                Return CType(Me("Cheminback"),String)
+            End Get
+            Set
+                Me("Cheminback") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

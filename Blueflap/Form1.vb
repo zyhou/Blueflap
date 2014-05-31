@@ -62,7 +62,7 @@
         Else
             Menu_Favos.Visible = False
         End If
-        If share_checkbox.Checked = True Then
+        If infos_checkbox.Checked = True Then
             Menu_Share.Visible = True
         Else
             Menu_Share.Visible = False
@@ -82,6 +82,13 @@
         Else
             Menu_Memo.Visible = False
         End If
+
+        If Share_checkbox.Checked = True Then
+            menu_partage.Visible = True
+        Else
+            menu_partage.Visible = False
+        End If
+
         If Stng_Volet_Mousehover_agrandir.Visible = False Then
             Stng_Volet_Mousehover_agrandir.Checked = False
         End If
@@ -223,7 +230,7 @@
         Else
             Menu_Favos.Visible = False
         End If
-        If share_checkbox.Checked = True Then
+        If infos_checkbox.Checked = True Then
             Menu_Share.Visible = True
         Else
             Menu_Share.Visible = False
@@ -243,17 +250,23 @@
         Else
             Menu_Memo.Visible = False
         End If
+        If Share_checkbox.Checked = True Then
+            menu_partage.Visible = True
+        Else
+            menu_partage.Visible = False
+        End If
         Label14.Left = (Me.Width - Label14.Width) / 2
         BS_Date.Text = System.DateTime.Now.ToString("dddd dd MMMM yyyy")
         BS_Date.Left = (Me.Width - BS_Date.Width) / 2
         Verr_BlackEffect.Left = (Me.Width - Verr_BlackEffect.Width) / 2
         Verr_Time.Text = System.DateTime.Now.ToString("HH:mm")
         Verr_Date.Text = System.DateTime.Now.ToString("dddd dd MMMM yyyy")
-        If Not ABlueflap_Bluestart.Tag Is DBNull.Value Then
-            If System.IO.File.Exists(ABlueflap_Bluestart.Tag) Then
-                Dim fileeName As String = System.IO.Path.GetFullPath(ABlueflap_Bluestart.Tag)
-                ABlueflap_Bluestart.BackgroundImage = Image.FromFile(ABlueflap_Bluestart.Tag)
-                ABlueflap_Verrouillage.BackgroundImage = Image.FromFile(ABlueflap_Bluestart.Tag)
+        If Not BackgroundChemin.Text Is DBNull.Value Then
+            If System.IO.File.Exists(BackgroundChemin.Text) Then
+                Dim fileeName As String = System.IO.Path.GetFullPath(BackgroundChemin.Text)
+                ABlueflap_Bluestart.BackgroundImage = Image.FromFile(BackgroundChemin.Text)
+                ABlueflap_Verrouillage.BackgroundImage = Image.FromFile(BackgroundChemin.Text)
+                stng_picdemo.Image = Image.FromFile(BackgroundChemin.Text)
             End If
         End If
     End Sub
@@ -554,6 +567,7 @@
             Menu_Fight.Font = New Font("Segoe UI Light", 16)
             Menu_Settings.Font = New Font("Segoe UI Light", 16)
             Menu_Share.Font = New Font("Segoe UI Light", 16)
+            menu_partage.Font = New Font("Segoe UI Light", 16)
             Menu_Favos.Font = New Font("Segoe UI Light", 16)
             Menu_Lock.Font = New Font("Segoe UI Light", 16)
             Menu_FullScr.Font = New Font("Segoe UI Light", 16)
@@ -573,6 +587,7 @@
             Menu_Fight.Font = New Font("Segoe UI Light", 11)
             Menu_Settings.Font = New Font("Segoe UI Light", 11)
             Menu_Share.Font = New Font("Segoe UI Light", 11)
+            menu_partage.Font = New Font("Segoe UI Light", 11)
             Menu_Favos.Font = New Font("Segoe UI Light", 11)
             Menu_Lock.Font = New Font("Segoe UI Light", 11)
             Menu_FullScr.Font = New Font("Segoe UI Light", 11)
@@ -695,7 +710,8 @@
         If open.ShowDialog() = DialogResult.OK Then
             Dim fileName As String = System.IO.Path.GetFullPath(open.FileName)
             ABlueflap_Bluestart.BackgroundImage = New Bitmap(open.FileName)
-            ABlueflap_Bluestart.Tag = fileName
+            BackgroundChemin.Text = fileName
+            stng_picdemo.Image = New Bitmap(open.FileName)
         End If
     End Sub
 
@@ -877,8 +893,9 @@
         open.Filter = "Image Files(*.png; *.jpg; *.bmp)|*.png; *.jpg; *.bmp"
         If open.ShowDialog() = DialogResult.OK Then
             Dim fileName As String = System.IO.Path.GetFullPath(open.FileName)
-            ABlueflap_Bluestart.Tag = fileName
+            BackgroundChemin.Text = fileName
             ABlueflap_Bluestart.BackgroundImage = New Bitmap(open.FileName)
+            stng_picdemo.Image = New Bitmap(open.FileName)
         End If
     End Sub
 
