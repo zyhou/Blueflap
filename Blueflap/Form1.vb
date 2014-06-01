@@ -109,6 +109,15 @@
 
         ElseIf Stng_MoteurRecherche_choose.Text = "Wikipedia" Then
             Stng_MoteurRecherche_URL.Text = "http://fr.wikipedia.org/w/index.php?search="
+
+        ElseIf Stng_MoteurRecherche_choose.Text = "Qwant" Then
+            Stng_MoteurRecherche_URL.Text = "http://www.qwant.com/?q="
+
+        ElseIf Stng_MoteurRecherche_choose.Text = "Github" Then
+            Stng_MoteurRecherche_URL.Text = "https://github.com/search?q="
+
+        ElseIf Stng_MoteurRecherche_choose.Text = "Ask" Then
+            Stng_MoteurRecherche_URL.Text = "http://fr.ask.com/web?q="
         End If
     End Sub
     Private Sub ActualiserToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles Menu_Refresh.Click
