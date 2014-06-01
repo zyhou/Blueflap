@@ -15,15 +15,14 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles GoButton.Click
         Dim textArray = SmartAdressbox.Text.Split(" ")
         If (SmartAdressbox.Text.Contains(".") = True And SmartAdressbox.Text.Contains(" ") = False And SmartAdressbox.Text.Contains(" .") = False And SmartAdressbox.Text.Contains(". ") = False) Or textArray(0).Contains(":/") = True Or textArray(0).Contains(":\") Then
-            If SmartAdressbox.Text.Contains("http://") Or SmartAdressbox.Text.Contains("https://") Then
+            If SmartAdressbox.Text.Contains("http://") OrElse SmartAdressbox.Text.Contains("https://") Then
                 Web.Source = New Uri(SmartAdressbox.Text)
             Else
                 Web.Source = New Uri("http://" + SmartAdressbox.Text)
             End If
         Else
-            If Stng_MoteurRecherche_URL.Text.Contains("http://") Then
-                Web.Source = New Uri(Stng_MoteurRecherche_URL.Text + SmartAdressbox.Text)
-            ElseIf Stng_MoteurRecherche_URL.Text.Contains("https://") Then
+
+            If Stng_MoteurRecherche_URL.Text.Contains("http://") OrElse Stng_MoteurRecherche_URL.Text.Contains("https://") Then
                 Web.Source = New Uri(Stng_MoteurRecherche_URL.Text + SmartAdressbox.Text)
             Else
                 MessageBox.Show("Veuillez vérifier les paramètres du moteur de recherche")
@@ -35,9 +34,8 @@
 
     Private Sub ToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles Menu_Settings.Click
         ABlueflap_Settings.BringToFront()
-        If Stng_MP_confirm.Text = Stng_MP.Text Then
-            Stng_MP.Enabled = True
-        ElseIf Stng_MP.Text = "" Then
+
+        If Stng_MP_confirm.Text.Equals(Stng_MP.Text) OrElse String.IsNullOrWhiteSpace(Stng_MP.Text) Then
             Stng_MP.Enabled = True
         Else
             Stng_MP.Enabled = False
@@ -135,41 +133,29 @@
     End Sub
 
     Private Sub Awesomium_Windows_Forms_WebControl_DocumentReady(sender As Object, e As Awesomium.Core.UrlEventArgs) Handles Web.DocumentReady
-        SmartAdressbox.Text = Web.Source.ToString
-        Infos_Adresse.Text = Web.Source.ToString
-        If Fav_fav_List.Items.Contains(Web.Source.ToString) Then
+        Dim webSource As String = Web.Source.ToString()
+
+        SmartAdressbox.Text = webSource
+        Infos_Adresse.Text = webSource
+        If Fav_fav_List.Items.Contains(webSource) Then
             AddFavo_Button.BackColor = Color.Azure
         Else
             AddFavo_Button.BackColor = Color.White
         End If
 
-        If Web.CanGoBack = True Then
-            Menu_Back.Enabled = True
-        Else
-            Menu_Back.Enabled = False
-        End If
-        If Web.CanGoForward = True Then
-            Menu_Forward.Enabled = True
-        Else
-            Menu_Forward.Enabled = False
-        End If
+        Menu_Back.Enabled = Web.CanGoBack
+        Menu_Forward.Enabled = Web.CanGoForward
+        Notif_internet.Visible = Not My.Computer.Network.IsAvailable
 
-        Dim isAvailable As Boolean
-        isAvailable = My.Computer.Network.IsAvailable
-        If My.Computer.Network.IsAvailable = False Then
-            Notif_internet.Visible = True
-        Else
-            Notif_internet.Visible = False
-        End If
         Dim html As String = Web.ExecuteJavascriptWithResult("document.getElementsByTagName('html')[0].innerHTML")
         Infos_code_source.Text = html
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If Stng_MPActiv.Checked = True Then
+        If Stng_MPActiv.Checked Then
             ABlueflap_Verrouillage.BringToFront()
         Else
-            If Stng_bluestart_checkbox.Checked = True Then
+            If Stng_bluestart_checkbox.Checked Then
                 ABlueflap_Bluestart.Visible = True
                 ABlueflap_Bluestart.BringToFront()
             Else
@@ -178,31 +164,22 @@
             End If
         End If
 
-        If Stng_HomePage_Url.Text.Contains("http://") Then
-            Web.Source = New Uri(Stng_HomePage_Url.Text)
-        ElseIf Stng_HomePage_Url.Text.Contains("https://") Then
+        If Stng_HomePage_Url.Text.Contains("http://") OrElse Stng_HomePage_Url.Text.Contains("https://") Then
             Web.Source = New Uri(Stng_HomePage_Url.Text)
         Else
             Web.Source = New Uri("http://google.fr")
             MessageBox.Show("La page d'accueil définie dans les paramètres n'est pas valide")
         End If
 
-        If Stng_Volet_reduire.Checked = True Then
+        If Stng_Volet_reduire.Checked Then
             voletlateral.Width = 27
             voletlateral.BackColor = Color.Black
         Else
-            voletlateral.Width = 27
             voletlateral.Width = 160
             voletlateral.BackColor = Color.White
         End If
 
-        Dim isAvailable As Boolean
-        isAvailable = My.Computer.Network.IsAvailable
-        If My.Computer.Network.IsAvailable = False Then
-            Notif_internet.Visible = True
-        Else
-            Notif_internet.Visible = False
-        End If
+        Notif_internet.Visible = Not My.Computer.Network.IsAvailable
 
         For Each item As String In My.Settings.Bookmarks
             Fav_fav_List.Items.Add(item)
@@ -242,9 +219,7 @@
     End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles Stng_HomePage_Url.TextChanged
-        If Stng_HomePage_Url.Text.Contains("http://") Then
-            Stng_ErreurURLHomepage.Visible = False
-        ElseIf Stng_HomePage_Url.Text.Contains("https://") Then
+          If Stng_HomePage_Url.Text.Contains("http://") OrElse Stng_HomePage_Url.Text.Contains("https://") Then
             Stng_ErreurURLHomepage.Visible = False
         Else
             Stng_ErreurURLHomepage.Visible = True
@@ -256,9 +231,7 @@
             ABlueflap_Bluestart.Visible = True
             ABlueflap_Bluestart.BringToFront()
         Else
-            If Stng_HomePage_Url.Text.Contains("http://") Then
-                Web.Source = New Uri(Stng_HomePage_Url.Text)
-            ElseIf Stng_HomePage_Url.Text.Contains("https://") Then
+            If Stng_HomePage_Url.Text.Contains("http://") OrElse Stng_HomePage_Url.Text.Contains("https://") Then
                 Web.Source = New Uri(Stng_HomePage_Url.Text)
             Else
                 Web.Source = New Uri("http://google.fr")
@@ -268,12 +241,11 @@
     End Sub
 
     Private Sub Volet_settings_CheckedChanged(sender As Object, e As EventArgs) Handles Stng_Volet_reduire.CheckedChanged
-        If Stng_Volet_reduire.Checked = True Then
+        If Stng_Volet_reduire.Checked Then
             voletlateral.Width = 27
             voletlateral.BackColor = Color.Black
             Stng_Volet_Mousehover_agrandir.Visible = True
         Else
-            voletlateral.Width = 27
             voletlateral.Width = 160
             voletlateral.BackColor = Color.White
             voletlateral.SendToBack()
@@ -295,7 +267,7 @@
     End Sub
 
     Private Sub TextBox3_TextChanged(sender As Object, e As EventArgs) Handles Stng_MP_confirm.TextChanged
-        If Stng_MP_confirm.Text = Stng_MP.Text Then
+        If Stng_MP_confirm.Text.Equals(Stng_MP.Text) Then
             Stng_MPActiv.Enabled = True
             Stng_MP.Enabled = True
             Stng_MP_confirm.ForeColor = Color.Green
@@ -321,7 +293,7 @@
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Verr_AcceptButt.Click
-        If Verr_Textbox.Text = Stng_MP.Text Then
+        If Verr_Textbox.Text.Equals(Stng_MP.Text) Then
             ABlueflap_Navigateur.BringToFront()
             ABlueflap_Verrouillage.Visible = False
         Else
@@ -330,7 +302,7 @@
 
     End Sub
     Private Sub CheckBox3_CheckedChanged(sender As Object, e As EventArgs) Handles Stng_Volet_Mousehover_agrandir.CheckedChanged
-        If Stng_Volet_Mousehover_agrandir.Checked = True Then
+        If Stng_Volet_Mousehover_agrandir.Checked Then
             voletlateral.BringToFront()
         Else
             voletlateral.SendToBack()
@@ -436,8 +408,7 @@
         End If
     End Sub
     Private Sub Favoris_Norif(sender As Object, e As EventArgs) Handles Fav_fav_List.DoubleClick
-        If Fav_fav_List.SelectedItem = "" Then
-        Else
+        If Not String.IsNullOrWhiteSpace(Fav_fav_List.SelectedItem) Then
             Web.Source = New Uri(Fav_fav_List.SelectedItem)
         End If
     End Sub
@@ -450,8 +421,7 @@
     End Sub
 
     Private Sub AccéderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AccéderToolStripMenuItem.Click
-        If Fav_fav_List.SelectedItem = "" Then
-        Else
+        If Not String.IsNullOrWhiteSpace(Fav_fav_List.SelectedItem) Then
             Web.Source = New Uri(Fav_fav_List.SelectedItem)
         End If
     End Sub
@@ -497,9 +467,8 @@
         Menu_Refresh.Visible = True
         Infos_Titre.Text = Web.Title
 
-        If Not stng_nevpriv.Checked = True Then
-            If Fav_Historique_List.Items.Contains(SmartAdressbox.Text) Then
-            Else
+        If Not stng_nevpriv.Checked Then
+            If Not Fav_Historique_List.Items.Contains(SmartAdressbox.Text) Then
                 My.Settings.Historique.Add(SmartAdressbox.Text)
                 Fav_Historique_List.Items.Clear()
                 For Each Item As String In My.Settings.Historique
@@ -580,8 +549,7 @@
     End Sub
 
     Private Sub Histor_Click(sender As Object, e As EventArgs) Handles Fav_Historique_List.Click
-        If Fav_Historique_List.SelectedItem = "" Then
-        Else
+        If Not String.IsNullOrWhiteSpace(Fav_Historique_List.SelectedItem) Then
             Web.Source = New Uri(Fav_Historique_List.SelectedItem)
         End If
     End Sub
@@ -598,7 +566,7 @@
     End Sub
 
     Private Sub CheckBox2_CheckedChanged_1(sender As Object, e As EventArgs) Handles Stng_MaximizedWindow.CheckedChanged
-        If Stng_MaximizedWindow.Checked = True Then
+        If Stng_MaximizedWindow.Checked Then
             Me.WindowState = FormWindowState.Maximized
         Else
         End If
@@ -611,21 +579,17 @@
     End Sub
 
     Private Sub volet_MouseHover(sender As Object, e As EventArgs) Handles voletlateral.MouseHover
-        If Stng_Volet_reduire.Checked = True Then
-            If Stng_Volet_Mousehover_agrandir.Checked = True Then
-                voletlateral.BackColor = Color.White
-                voletlateral.Width = 160
-            End If
+        If Stng_Volet_reduire.Checked AndAlso Stng_Volet_Mousehover_agrandir.Checked Then
+            voletlateral.BackColor = Color.White
+            voletlateral.Width = 160
         End If
 
     End Sub
 
     Private Sub volet_MouseLeave(sender As Object, e As EventArgs) Handles voletlateral.MouseLeave
-        If Stng_Volet_reduire.Checked = True Then
-            If Stng_Volet_Mousehover_agrandir.Checked = True Then
-                voletlateral.Width = 27
-                voletlateral.BackColor = Color.Black
-            End If
+        If Stng_Volet_reduire.Checked AndAlso Stng_Volet_Mousehover_agrandir.Checked Then
+            voletlateral.Width = 27
+            voletlateral.BackColor = Color.Black
         End If
     End Sub
 
@@ -659,9 +623,7 @@
     End Sub
 
     Private Sub Button15_Click(sender As Object, e As EventArgs) Handles BS_Searchbutton.Click
-        If Stng_MoteurRecherche_URL.Text.Contains("http://") Then
-            Web.Source = New Uri(Stng_MoteurRecherche_URL.Text + Bs_Searchbox.Text)
-        ElseIf Stng_MoteurRecherche_URL.Text.Contains("https://") Then
+        If Stng_MoteurRecherche_URL.Text.Contains("http://") OrElse Stng_MoteurRecherche_URL.Text.Contains("https://") Then
             Web.Source = New Uri(Stng_MoteurRecherche_URL.Text + Bs_Searchbox.Text)
         Else
             MessageBox.Show("Veuillez vérifier les paramètres du moteur de recherche")
@@ -677,7 +639,7 @@
     Private Sub Button16_Click(sender As Object, e As EventArgs) Handles BS_ImgChoose.Click
         Dim open As New OpenFileDialog()
         open.Filter = "Image Files(*.png; *.jpg; *.bmp)|*.png; *.jpg; *.bmp"
-        If open.ShowDialog() = DialogResult.OK Then
+        If open.ShowDialog = DialogResult.OK Then
             Dim fileName As String = System.IO.Path.GetFullPath(open.FileName)
             ABlueflap_Bluestart.BackgroundImage = New Bitmap(open.FileName)
             BackgroundChemin.Text = fileName
@@ -695,8 +657,7 @@
         End If
     End Sub
     Private Sub Flop_SelectedIndexChanged(sender As Object, e As EventArgs) Handles BS_Favlist.Click
-        If BS_Favlist.SelectedItem = "" Then
-        Else
+        If Not String.IsNullOrWhiteSpace(BS_Favlist.SelectedItem) Then
             Web.Source = New Uri(BS_Favlist.SelectedItem)
             ABlueflap_Navigateur.BringToFront()
             ABlueflap_Bluestart.Visible = False
