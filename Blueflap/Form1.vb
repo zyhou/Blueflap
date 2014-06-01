@@ -445,11 +445,7 @@
     End Sub
 
     Private Sub ToolStripMenuItem9_Click(sender As Object, e As EventArgs) Handles Menu_Favos.Click
-        If Panel1.Visible = True Then
-            Panel1.Visible = False
-        Else
-            Panel1.Visible = True
-        End If
+        Panel1.Visible = Not Panel1.Visible
     End Sub
 
     Private Sub Notif_add_Click(sender As Object, e As EventArgs) Handles Notif_add.Click
